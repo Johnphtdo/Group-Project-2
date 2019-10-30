@@ -1,7 +1,7 @@
 {
   "name": "Group-Project-2",
   "version": "1.0.0",
-  "description": "[![Contributors][contributors-shield]][contributors-url]\r [![Forks][forks-shield]][forks-url]\r [![Stargazers][stars-shield]][stars-url]\r [![Issues][issues-shield]][issues-url]",
+  "description": "Group Project 2 Recipes DB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mysql": "^2.17.1"
+    "mysql2": "^2.0.0",
+    "sequelize": "^5.21.2"
   }
 }
