@@ -105,13 +105,16 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- CONTACT -->
 ## Contact
-
-<!-- ### Jasmine 
-[Github Portfolio](https://jtsai972.github.io/Github-Portfolio/) | [Website - Jtsai972.space](jtsai972.space) | [Email Me](jtsai972@gmail.com)
-
 Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/Johnphtdo/Group-Project-2)
 
-[Back to Table of Contents](#table-of-contents) -->
+### John Do
+
+### Kala Elam
+
+### Jasmine Tsai
+[Github Portfolio](https://jtsai972.github.io/Github-Portfolio/) | [Website - Jtsai972.space](jtsai972.space) | [Email Me](jtsai972@gmail.com) | [Linked In](https://www.linkedin.com/in/jasmine-tsai/)
+
+[Back to Table of Contents](#table-of-contents)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
