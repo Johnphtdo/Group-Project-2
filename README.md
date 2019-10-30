@@ -45,14 +45,10 @@
 Thi
 
 ### Built With
+ * [MySQL](https://www.mysql.com/)
  * [Node.js](https://nodejs.org/en/)
- <!-- * [Node Package - Axios](https://www.npmjs.com/package/axios)
- * [Node Package - DotEnv](https://www.npmjs.com/package/dotenv)
- * [Node Package - Inquirer](https://www.npmjs.com/package/inquirer)
- * [Node Package - Moment](https://www.npmjs.com/package/moment)
- * [Node Package - API - Spotify API](https://www.npmjs.com/package/node-spotify-api)
- * [API - OMDB](http://www.omdbapi.com) 
- * [API - Bands In Town](http://www.artists.bandsintown.com/bandsintown-api) -->
+ * [Express.js](http://expressjs.com/)
+ * [Sequelize](https://sequelize.org/v5/)
  * [othneildrew - Best README Template](https://github.com/othneildrew/Best-README-Template)
  
  
