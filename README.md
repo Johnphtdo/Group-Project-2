@@ -48,6 +48,7 @@ Thi
  * [MySQL](https://www.mysql.com/)
  * [Node.js](https://nodejs.org/en/)
  * [Express.js](http://expressjs.com/)
+ * [Node Package - Express Handlebars](https://www.npmjs.com/package/express-handlebars)
  * [Sequelize](https://sequelize.org/v5/)
  * [othneildrew - Best README Template](https://github.com/othneildrew/Best-README-Template)
  
