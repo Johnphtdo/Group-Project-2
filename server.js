@@ -1,7 +1,7 @@
 // * Requires
 const express = require("express");
 const exphbs = require("express-handlebars");
-//const routes = require("");//include the controller file
+var db = require("./models");
 
 /* ----------------------------------------------
  * SET UP App
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // * Adding routes
-//app.use(routes);
+require("./routes/api-routes")(app); //include the controller file
 
 /* ----------------------------------------------
  * SET UP Handlebars
@@ -31,8 +31,8 @@ app.set("view engine", "handlebars");
 /* ----------------------------------------------
  * START Server
  * ---------------------------------------------- */
-app.listen(PORT, function() {
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
     console.log("App now listening at http://localhost:" + PORT);
+  });
 });
-
-
