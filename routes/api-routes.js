@@ -28,7 +28,7 @@ module.exports = function(app){
         .then(function(data){
             res.json(data);
         });
-    })
+    });
     // POST route for saving a new recipe
     app.post("api/recipes",function(req,res){
         db.Recipe.create({
@@ -38,7 +38,17 @@ module.exports = function(app){
             instructions:req.body.instructions,
             cook_time:req.body.cook_time,
             prep_time:req.body.prep_time
-        })
-    })
+        }).then(function(data){
+            res.json(data);
+        });
+    });
 
+    // DELETE route for users to delete recipes
+    app.delete("/api/recipes/:id", function(req,res){
+        db.Recipe.destroy({
+            where: {id: req.params.id}
+        }).then(function(data){
+            res.json(data);
+        });
+    });
     }
