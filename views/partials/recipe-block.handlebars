@@ -1,0 +1,15 @@
+<h1>{{recipe_name}}</h1>
+<p>Created by: {{user_name}}</p>
+<p>Prep time: {{prep_time}}</p>
+<p>Cook time: {{cook_time}}</p>
+
+<h2>Ingredients</h2>
+<ul>
+    <!-- Use javascript to split the string by comma to post -->
+    {{#each ingredients}}
+    <li>{{ingredient_amount}} {{ingredient_name}}</li>
+    {{/each}}
+</ul>
+
+<h2>Directions</h2>
+<div>{{instructions}}</div>
