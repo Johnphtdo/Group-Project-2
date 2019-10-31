@@ -1,11 +1,18 @@
 // Dependencies
 var bcrypt = require("bcrypt");
+// Variables for bcrypt
+
+// saltRounds is how many times the password will run
+// through encryption. Makes harder to hack information
+var saltRounds = 10;
+
 // Requiring our recipe models
 var db = require("../models");
 
 // Routes
 
 module.exports = function(app){
+    // Routes for the Recipe Table
 
     // GET route for getting all recipes by User
     app.get("/api/recipes/:user_name", function(req, res){
@@ -51,4 +58,33 @@ module.exports = function(app){
             res.json(data);
         });
     });
-    }
+
+    // Routes for the Users Table
+    // POST route for the User_names
+    app.post("/api/users", function(req,res){
+       var userPW = req.body.password;
+       bcrypt.genSalt(saltRounds, function(err, salt) {
+        
+        bcrypt.hash(userPW, salt, function(err, hash) {
+        db.Users.create({
+            user_name: req.body.user_name,
+            password: hash
+        }).then(function(data){
+            res.json(data);
+        });
+    });
+});
+    });
+    // GET route to authenticate users
+    app.get("api/users", function(req,res){
+        var userPW = req.body.password;
+        db.Users.findOne({
+            where: {
+                user_name: req.params.user_name
+            }.bcrypt.compare(userPW, hash).then(function(data) {
+                if (data){res.render("index")}
+            })
+        })
+    })
+
+}
