@@ -77,7 +77,7 @@ module.exports = function(app){
 });
     });
    
-    //login page: storing and comparing email and password,and redirecting to home page after login
+    //login page: storing and comparing username and password,and redirecting to / page after login
   app.post('/api/users', function (req, res) {
       var userPW = req.body.password
     db.Users.findOne({
@@ -99,6 +99,5 @@ module.exports = function(app){
     }
  });
 });
-
 
 }
