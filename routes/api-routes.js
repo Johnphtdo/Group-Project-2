@@ -1,5 +1,5 @@
 // Dependencies
-var bcrypt = require("bcrypt");
+// var bcrypt = require("bcrypt");
 // Variables for bcrypt
 var saltRounds = 10;
 

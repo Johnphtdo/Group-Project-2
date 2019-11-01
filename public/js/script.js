@@ -1,11 +1,11 @@
 $(document).ready(function() {
     // Getting references to the name input and author container, as well as the table body
-    var recipeNameInput = "";
-    var userNameInput= "";
-    var ingredientsInput= "";
-    var instructionsInput= "";
-    var cookTimeInput= "";
-    var prepTimeInput= "";
+    // var recipeNameInput = "";
+    // var userNameInput= "";
+    // var ingredientsInput= "";
+    // var instructionsInput= "";
+    // var cookTimeInput= "";
+    // var prepTimeInput= "";
 
     $(document).on("click", "#recipe-form", recipeSubmit);
 
