@@ -13,7 +13,6 @@ $(document).ready(function() {
         event.preventDefault();
 
         var newRecipe = {
-            name: $("#burg").val().trim(),
             user_name: $("#inputRecipeName").val().trim(),
             recipe_name: $("#inputUserNameg").val().trim(),
             // ingredients: $("#burg").val().trim(), inputAmount, need Measurements, inputIngredient
@@ -27,7 +26,7 @@ $(document).ready(function() {
           }).then(
             function() {
               console.log("created new recipe");
-              // Reload the page to get the updated list
+              // Reload the page to get the update
               location.reload();
             }
           );
