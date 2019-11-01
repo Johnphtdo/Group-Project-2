@@ -14,10 +14,7 @@ module.exports = function(app){
     // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
-    });
-    // app.get("/", function(req, res) {
-    //     res.render("index");
-    // });
+
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
         db.Recipe.findAll({
@@ -65,7 +62,7 @@ module.exports = function(app){
 
     // Routes for the Users Table
     // POST route for the User_names
-    app.post("/api/users", function(req,res){
+    app.post("/api/users/create", function(req,res){
        var userPW = req.body.password;
        bcrypt.genSalt(saltRounds, function(err, salt) {
         
@@ -79,23 +76,29 @@ module.exports = function(app){
     });
 });
     });
-    // GET route to authenticate users
-    app.post("api/users/login", function(req,res){
-        var userPW = req.body.password;
-        db.Users.findOne({
-            where: {
-                user_name: req.body.user_name
-            }.then(function(data) {
-                bcrypt.genSalt(saltRounds, function(err, salt) {
-                    bcrypt.hash(userPW, salt, function(err, hash) {
-                        bcrypt.compare(data.password, hash, function(err, res) {
-                            if(res){res.send("it works")}
-                            else{res.send(err)}
-                        });
-                    });
-                });
-            })
-        });
-    });
+   
+    //login page: storing and comparing email and password,and redirecting to home page after login
+  app.post('/api/users', function (req, res) {
+      var userPW = req.body.password
+    db.Users.findOne({
+         where: {
+             user_name: req.body.user_name
+                }
+    }).then(function (user) {
+        if (!user) {
+           res.redirect('/');
+        } else {
+        bcrypt.compare(userPW, user.password, function (err, result) {
+       if (result == true) {
+           res.redirect('/');
+       } else {
+        res.send('Incorrect password');
+        res.redirect('/');
+       }
+     });
+    }
+ });
+});
+
 
 }
