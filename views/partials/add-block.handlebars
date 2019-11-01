@@ -1,55 +1,99 @@
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputRecipe4">Recipe Name</label>
-      <input type="text" class="form-control" id="inputRecipe4" placeholder="Email">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Somerecipes<i class="fas fa-utensils"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="hitmeup@email.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="PassWord" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputRecipeName">Recipe Name</label>
+                <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputUserName">Created by:</label>
+                <input type="text" class="form-control" id="inputUserName" placeholder="KalaCANcook" />
+            </div>
+        </div>
+
+    <!-- This may have to be created dynamically so that you keep adding more ingredients -->
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputAmount">Amount</label>
+            <input type="text" class="form-control" id="inputAmount" placeholder="1.5" />
+            <select id="inputAmount" class="form-row">
+                <option selected>Choose...</option>
+                <option>Teaspoon(s)</option>
+                <option>Tablespoon(s)</option>
+                <option>Cup(s)</option>
+                <option>Ounce(s)</option>
+                <option>Pint(s)</option>
+                <option>Quart(s)</option>
+                <option>Gallon(s)</option>
+                <option>Pound(s)</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="form-group col-md-8">
+            <label for="inputIngredient">Ingredient</label>
+            <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
+        </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputUser4">Created by:</label>
-      <input type="text" class="form-control" id="inputUser4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAmount">Amount</label>
-    <input type="text" class="form-control" id="inputAmount" placeholder="1234 Main St">
-    <select id="inputAmount" class="form-control">
-        <option selected>Choose...</option>
-        <option>Teaspoon(s)</option>
-        <option>Tablespoon(s)</option>
-        <option>Cup(s)</option>
-        <option>Ounce(s)</option>
-        <option>Pint(s)</option>
-        <option>Quart(s)</option>
-        <option>Gallon(s)</option>
-        <option>Pound(s)</option>
-        <option>...</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="inputIngredient">Ingredient</label>
-    <input type="text" class="form-control" id="inputIngredient" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputInstructions">Instructions</label>
-      <input type="text" class="form-control" id="inputInstructions">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputCook">Cook Time</label>
-      <input type="text" class="form-control" id="inputCook">
-    </div>
-  </div>
-    <div class="form-group col-md-2">
-      <label for="inputPrep">Prep Time</label>
-      <input type="text" class="form-control" id="inputPrep">
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Add It!</button>
-</form>
+         <!-- This may have to be created dynamically so that you keep adding more ingredients -->
+        <div class="form-group">
+                <label for="inputInstructions">Instructions</label>
+                <input type="text" class="form-control" id="inputInstructions" />
+            </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputCook">Cook Time</label>
+                <input type="text" class="form-control" id="inputCook" />
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="inputPrep">Prep Time</label>
+                <input type="text" class="form-control" id="inputPrep" />
+            </div>
+        </div>
+
+        <button type="submit" id="recipe-form" class="btn btn-primary">
+            Add It!
+        </button>
+    </form>

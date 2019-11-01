@@ -1,5 +1,5 @@
 // Dependencies
-var bcrypt = require("bcrypt");
+// var bcrypt = require("bcrypt");
 // Variables for bcrypt
 var saltRounds = 10;
 
@@ -14,7 +14,7 @@ module.exports = function(app){
     // Routes for the Recipe Table
 
     // GET route for getting all recipes by User
-    app.get("/api/recipes/:user_name", function(req, res){
+    app.get("/api/recipe/:user_name", function(req, res){
         db.Recipe.findAll({
             where: {
                 user_name: req.params.user_name
@@ -25,7 +25,7 @@ module.exports = function(app){
     });
 
     // GET route for retrieving single recipe
-    app.get("/api/recipes/:recipe_name", function(req,res){
+    app.get("/api/recipe/:recipe_name", function(req,res){
         db.Recipe.findOne({
             where: {
                 recipe_name: req.params.recipe_name
@@ -36,7 +36,7 @@ module.exports = function(app){
         });
     });
     // POST route for saving a new recipe
-    app.post("api/recipes",function(req,res){
+    app.post("api/recipe",function(req,res){
         db.Recipe.create({
             user_name: req.body.user_name,
             recipe_name:req.body.recipe_name,
@@ -50,7 +50,7 @@ module.exports = function(app){
     });
 
     // DELETE route for users to delete recipes
-    app.delete("/api/recipes/:id", function(req,res){
+    app.delete("/api/recipe/:id", function(req,res){
         db.Recipe.destroy({
             where: {id: req.params.id}
         }).then(function(data){
