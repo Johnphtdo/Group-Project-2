@@ -1,5 +1,5 @@
 // Dependencies
-// var bcrypt = require("bcrypt");
+var bcrypt = require("bcrypt");
 // Variables for bcrypt
 var saltRounds = 10;
 
@@ -12,7 +12,12 @@ var db = require("../models");
 
 module.exports = function(app){
     // Routes for the Recipe Table
-
+    app.get("/", function(req, res) {
+        res.render("index");
+    });
+    // app.get("/", function(req, res) {
+    //     res.render("index");
+    // });
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
         db.Recipe.findAll({
