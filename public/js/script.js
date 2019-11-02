@@ -7,10 +7,12 @@ $(document).ready(function() {
     // var cookTimeInput= "";
     // var prepTimeInput= "";
 
+
     $(document).on("click", "#signIn", signIn);
     $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
     $(document).on("click", "#recipe-form", recipeSubmit);
+    $(document).on("click", "#addIngredient", addIngredient);
 
     function signIn(event) {
        event.preventDefault(); 
@@ -46,7 +48,7 @@ $(document).ready(function() {
         var newRecipe = {
             user_name: $("#inputRecipeName").val().trim(),
             recipe_name: $("#inputUserNameg").val().trim(),
-            // ingredients: $("#burg").val().trim(), inputAmount, need Measurements, inputIngredient
+            ingredients: ingredientsArray,
             instructions: $("#inputInstructions").val().trim(),
             cook_time: $("#inputCook").val().trim(),
             prep_time: $("#inputPrep").val().trim(),
@@ -64,6 +66,22 @@ $(document).ready(function() {
     }
 
 
+//this is for ingredients being added
+ var ingredientsArray = [];
+
+function addIngredient(event) {
+    event.preventDefault();
+    var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
+// console.log(oneIngredient)
+    ingredientsArray.push(oneIngredient);
+    $("#inputAmount").val(" ");
+    $("#inputMeasurement").val(" ");
+    $("#inputIngredient").val(" ");
+    console.log(ingredientsArray)
+// before empty append ingredient on 76 so they can see add ingredients in new div under
+    // console.log(ingredientsArray)
+
+}
 
 
 
