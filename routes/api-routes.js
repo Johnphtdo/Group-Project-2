@@ -1,5 +1,7 @@
 // Dependencies
 var bcrypt = require("bcrypt");
+var passport = require('passport')
+var LocalStrategy = require('passport-local').Strategy;
 // Variables for bcrypt
 var saltRounds = 10;
 
@@ -12,9 +14,9 @@ var db = require("../models");
 
 module.exports = function(app){
    // here so that I can check form for styling
-    // app.get("/form", function(req, res) {
-    //     res.render("partials/add-block");
-    // });
+    app.get("/form", function(req, res) {
+        res.render("partials/add-block");
+    });
  // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
@@ -43,7 +45,8 @@ module.exports = function(app){
         });
     });
     // POST route for saving a new recipe
-    app.post("api/recipe",function(req,res){
+    app.post("/api/recipe",passport.authenticate('local', { successRedirect: '/form', failureRedirect: '/', }),function(req,res){
+
         db.Recipe.create({
             user_name: req.body.user_name,
             recipe_name:req.body.recipe_name,
@@ -67,7 +70,7 @@ module.exports = function(app){
 
     // Routes for the Users Table
     // POST route for the User_names
-    app.post("/api/users/register", function(req,res){
+    app.post("/users/register", function(req,res){
        var userPW = req.body.password;
        bcrypt.genSalt(saltRounds, function(err, salt) {
         
@@ -83,7 +86,7 @@ module.exports = function(app){
     });
    
     //login page: storing and comparing username and password,and redirecting to / page after login
-  app.post('/api/users/login', function (req, res) {
+  app.post('/users/login', function (req, res) {
       var userPW = req.body.password
     db.Users.findOne({
          where: {
