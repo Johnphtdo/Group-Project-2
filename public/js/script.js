@@ -44,23 +44,20 @@ $(document).ready(function() {
 
     function recipeSubmit(event) {
         event.preventDefault();
-
         var newRecipe = {
-            user_name: $("#inputRecipeName").val().trim(),
-            recipe_name: $("#inputUserNameg").val().trim(),
+            recipe_name: $("#inputRecipeName").val().trim(),
+            user_name: $("#inputUserName").val().trim(),
             ingredients: ingredientsArray,
             instructions: $("#inputInstructions").val().trim(),
             cook_time: $("#inputCook").val().trim(),
             prep_time: $("#inputPrep").val().trim(),
         };
-        $.ajax("/api/recipe", {
+        $.ajax("/api/recipes", {
             type: "POST",
             data: newRecipe
           }).then(
             function() {
               console.log("created new recipe");
-              // Reload the page to get the update
-              location.reload();
             }
           );
     }
@@ -80,7 +77,6 @@ function addIngredient(event) {
     console.log(ingredientsArray)
 // before empty append ingredient on 76 so they can see add ingredients in new div under
     // console.log(ingredientsArray)
-
 }
 
 
