@@ -1,13 +1,5 @@
-$(document).ready(function() {
-    // Getting references to the name input and author container, as well as the table body
-    // var recipeNameInput = "";
-    // var userNameInput= "";
-    // var ingredientsInput= "";
-    // var instructionsInput= "";
-    // var cookTimeInput= "";
-    // var prepTimeInput= "";
-
-
+$(document).ready(function () {
+    
     $(document).on("click", "#signIn", signIn);
     $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
@@ -15,22 +7,20 @@ $(document).ready(function() {
     $(document).on("click", "#addIngredient", addIngredient);
 
     function signIn(event) {
-       event.preventDefault(); 
-       
-       var userIn = {
-            user_name: $("#").val().trim(),
-            password: $("#").val().trim(),
+        event.preventDefault();
+
+        var userIn = {
+            user_name: $("#inputUser").val().trim(),
+            password: $("#inputPassword1").val().trim(),
         };
-        $.ajax("/api/user", {
-            type: "POST",
-            data: newRecipe
-          }).then(
-            function() {
-              console.log("created new recipe");
-              // Reload the page to get the update
-              location.reload();
+        $.post("/api/users", userIn)
+        .then(
+            function (data) {
+                console.log("Im in" + data);
+                // Reload the page to get the update
+                location.reload();
             }
-          );
+        );
     }
 
     function signUp(event) {
@@ -52,32 +42,29 @@ $(document).ready(function() {
             cook_time: $("#inputCook").val().trim(),
             prep_time: $("#inputPrep").val().trim(),
         };
-        $.ajax("/api/recipes", {
-            type: "POST",
-            data: newRecipe
-          }).then(
-            function() {
-              console.log("created new recipe");
+        $.post("/api/recipes", newRecipe)
+        .then(function (data) {
+            console.log(data);
+                console.log("created new recipe");
             }
-          );
+        );
     }
 
+    //this is for ingredients being added
+    var ingredientsArray = [];
 
-//this is for ingredients being added
- var ingredientsArray = [];
-
-function addIngredient(event) {
-    event.preventDefault();
-    var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
-// console.log(oneIngredient)
-    ingredientsArray.push(oneIngredient);
-    $("#inputAmount").val(" ");
-    $("#inputMeasurement").val(" ");
-    $("#inputIngredient").val(" ");
-    console.log(ingredientsArray)
-// before empty append ingredient on 76 so they can see add ingredients in new div under
-    // console.log(ingredientsArray)
-}
+    function addIngredient(event) {
+        event.preventDefault();
+        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
+        // console.log(oneIngredient)
+        ingredientsArray.push(oneIngredient);
+        $("#inputAmount").val(" ");
+        $("#inputMeasurement").val(" ");
+        $("#inputIngredient").val(" ");
+        console.log(ingredientsArray)
+        // before empty append ingredient on 76 so they can see add ingredients in new div under
+        // console.log(ingredientsArray)
+    }
 
 
 
