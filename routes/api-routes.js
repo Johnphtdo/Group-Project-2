@@ -62,7 +62,7 @@ module.exports = function(app){
 
     // Routes for the Users Table
     // POST route for the User_names
-    app.post("/api/users/create", function(req,res){
+    app.post("/api/users/register", function(req,res){
        var userPW = req.body.password;
        bcrypt.genSalt(saltRounds, function(err, salt) {
         
@@ -78,7 +78,7 @@ module.exports = function(app){
     });
    
     //login page: storing and comparing username and password,and redirecting to / page after login
-  app.post('/api/users', function (req, res) {
+  app.post('/api/users/login', function (req, res) {
       var userPW = req.body.password
     db.Users.findOne({
          where: {
