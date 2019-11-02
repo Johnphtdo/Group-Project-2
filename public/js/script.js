@@ -1,13 +1,5 @@
 $(document).ready(function () {
-    // Getting references to the name input and author container, as well as the table body
-    // var recipeNameInput = "";
-    // var userNameInput= "";
-    // var ingredientsInput= "";
-    // var instructionsInput= "";
-    // var cookTimeInput= "";
-    // var prepTimeInput= "";
-
-
+    
     $(document).on("click", "#signIn", signIn);
     $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
@@ -21,12 +13,10 @@ $(document).ready(function () {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
         };
-        $.ajax("/api/users", {
-            type: "POST",
-            data: userIn
-        }).then(
-            function () {
-                console.log("Im in");
+        $.post("/api/users", userIn)
+        .then(
+            function (data) {
+                console.log("Im in" + data);
                 // Reload the page to get the update
                 location.reload();
             }
@@ -52,17 +42,13 @@ $(document).ready(function () {
             cook_time: $("#inputCook").val().trim(),
             prep_time: $("#inputPrep").val().trim(),
         };
-        $.ajax("/api/recipe", {
-            type: "POST",
-            data: newRecipe
-        }).then(
-            function () {
+        $.post("/api/recipes", newRecipe)
+        .then(function (data) {
+            console.log(data);
                 console.log("created new recipe");
-                
             }
         );
     }
-
 
     //this is for ingredients being added
     var ingredientsArray = [];
