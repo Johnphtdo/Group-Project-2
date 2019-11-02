@@ -12,13 +12,14 @@ var db = require("../models");
 
 module.exports = function(app){
    // here so that I can check form for styling
-    // app.get("/form", function(req, res) {
-    //     res.render("partials/add-block");
-    // });
+    app.get("/add-recipe", function(req, res) {
+        res.render("partials/add-block");
+    });
  // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
     });
+
 
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
