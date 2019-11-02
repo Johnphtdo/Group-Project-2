@@ -11,10 +11,19 @@ var db = require("../models");
 // Routes
 
 module.exports = function(app){
-    // Routes for the Recipe Table
+   // here so that I can check form for styling
+    // app.get("/form", function(req, res) {
+    //     res.render("partials/add-block");
+    // });
+ // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
+<<<<<<< HEAD
     })
+=======
+    });
+
+>>>>>>> 6522767d89f58da4d8b6cd0b3cbde9ccfdef7ef8
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
         db.Recipe.findAll({
@@ -100,4 +109,8 @@ module.exports = function(app){
  });
 });
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6522767d89f58da4d8b6cd0b3cbde9ccfdef7ef8
