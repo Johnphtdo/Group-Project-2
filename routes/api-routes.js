@@ -11,9 +11,14 @@ var db = require("../models");
 // Routes
 
 module.exports = function(app){
-    // Routes for the Recipe Table
+   // here so that I can check form for styling
+    // app.get("/form", function(req, res) {
+    //     res.render("partials/add-block");
+    // });
+ // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
+    });
 
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
@@ -99,6 +104,5 @@ module.exports = function(app){
     }
  });
 });
-
 
 }
