@@ -42,9 +42,10 @@ $(document).ready(function () {
             cook_time: $("#inputCook").val().trim(),
             prep_time: $("#inputPrep").val().trim(),
         };
-        $.post("/api/recipes", newRecipe)
+        $.post("/api/recipe", newRecipe)
         .then(function (data) {
             console.log(data);
+            console.log(newRecipe)
                 console.log("created new recipe");
             }
         );
