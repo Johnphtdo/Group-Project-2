@@ -12,7 +12,15 @@ $(document).ready(function () {
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
+
         }
+    }
+    function signUp(event){
+        event.preventDefault();
+        var newUser = {
+            user_name: $('#inputUser').val().trim(),
+            password: $('#inputPassword1').val().trim(),
+        }; 
         $.post('/users/register', newUser).then(function(data){
             console.log(data);
             console.log("New User")
