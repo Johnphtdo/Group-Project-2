@@ -12,43 +12,48 @@ $(document).ready(function () {
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
-        };
-        $.post("/api/users", userIn)
-        .then(
-            function (data) {
-                console.log("Im in" + data);
+        }
+        $.ajax("/api/users", {
+            type: "POST",
+            data: userIn,
+          }).then(
+            function () {
+                console.log("Im in");
                 // Reload the page to get the update
                 location.reload();
             }
         );
-    }
+    };
 
     function signUp(event) {
         event.preventDefault();
-    }
+    };
 
     function searchRecipe(event) {
         event.preventDefault();
-    }
-
+    };
 
     function recipeSubmit(event) {
         event.preventDefault();
         var newRecipe = {
             recipe_name: $("#inputRecipeName").val().trim(),
             user_name: $("#inputUserName").val().trim(),
-            ingredients: ingredientsArray,
+            ingredients: ingredientsArray.toString(),
             instructions: $("#inputInstructions").val().trim(),
-            cook_time: $("#inputCook").val().trim(),
-            prep_time: $("#inputPrep").val().trim(),
-        };
-        $.post("/api/recipes", newRecipe)
-        .then(function (data) {
-            console.log(data);
+            cook_time: parseInt($("#inputCook").val().trim()),
+            prep_time: parseInt($("#inputPrep").val().trim()),
+        }
+        console.log(newRecipe)
+        $.ajax("/api/recipe",{
+            type: "POST",
+            data: newRecipe
+          }).then(
+            function() {
+            // console.log();
                 console.log("created new recipe");
             }
         );
-    }
+    };
 
     //this is for ingredients being added
     var ingredientsArray = [];
@@ -56,7 +61,7 @@ $(document).ready(function () {
     function addIngredient(event) {
         event.preventDefault();
         var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
-        // console.log(oneIngredient)
+        console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
         $("#inputAmount").val(" ");
         $("#inputMeasurement").val(" ");
@@ -64,7 +69,7 @@ $(document).ready(function () {
         console.log(ingredientsArray)
         // before empty append ingredient on 76 so they can see add ingredients in new div under
         // console.log(ingredientsArray)
-    }
+    };
 
 
 
