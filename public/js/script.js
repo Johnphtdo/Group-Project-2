@@ -63,7 +63,7 @@ $(document).ready(function () {
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
         // var addIngreed = $("<p>");
-        $('.recipeInMe').append(oneIngredient);
+        $('.ingredientsInMe').append(oneIngredient);
         // addIngreed.append(ingredientsArray);
         $("#inputAmount").val(" ");
         $("#inputMeasurement").val(" ");
@@ -72,7 +72,5 @@ $(document).ready(function () {
         // before empty append ingredient on 76 so they can see add ingredients in new div under
         // console.log(ingredientsArray)
     };
-
-
 
 })
