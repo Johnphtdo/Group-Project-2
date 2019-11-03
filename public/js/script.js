@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     $(document).on("click", "#signIn", signIn);
-    $(document).on("click", "#signUp", signUp);
+    // $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
     $(document).on("click", "#recipe-form", recipeSubmit);
     $(document).on("click", "#addIngredient", addIngredient);
@@ -9,15 +9,15 @@ $(document).ready(function () {
     function signIn(event) {
         event.preventDefault();
 
-        var userIn = {
-            user_name: $("#inputUser").val().trim(),
-            password: $("#inputPassword1").val().trim(),
+        // var userIn = {
+        //     user_name: $("#inputUser").val().trim(),
+        //     password: $("#inputPassword1").val().trim(),
 
 
         var newUser = {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
-        }; $.post('/users/register', newUser).then(function(data){
+        };$.post('/users/register', newUser).then(function(data){
             console.log(data);
             console.log("New User")
         })
@@ -47,8 +47,6 @@ $(document).ready(function () {
           }).then(
             function() {
             // console.log()
-     
-
                 console.log("created new recipe");
             }
         );
@@ -59,10 +57,13 @@ $(document).ready(function () {
 
     function addIngredient(event) {
         event.preventDefault();
-        
-        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
+        //need to remove & and insert commas where split occurs
+        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " ,";
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
+        // var addIngreed = $("<p>");
+        $('.recipeInMe').append(oneIngredient);
+        // addIngreed.append(ingredientsArray);
         $("#inputAmount").val(" ");
         $("#inputMeasurement").val(" ");
         $("#inputIngredient").val(" ");

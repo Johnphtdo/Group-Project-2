@@ -39,8 +39,6 @@ module.exports = function(app){
     // POST route for saving a new recipe
 
     app.post("/api/recipe", function(req,res){
-
-
         db.Recipe.create({
             user_name: req.body.user_name,
             recipe_name:req.body.recipe_name,
