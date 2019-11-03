@@ -12,19 +12,8 @@ $(document).ready(function () {
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
-        };
-        $.post("/users/login", userIn)
-        .then(
-            function (data) {
-                console.log("Im in" + data);
-                // Reload the page to get the update
-                location.reload();
-            }
-        );
-    }
 
-    function signUp(event) {
-        event.preventDefault();
+
         var newUser = {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
@@ -34,10 +23,10 @@ $(document).ready(function () {
         })
     }
 
+
     function searchRecipe(event) {
         event.preventDefault();
-    }
-
+    };
 
     function recipeSubmit(event) {
         event.preventDefault();
@@ -49,14 +38,21 @@ $(document).ready(function () {
             instructions: $("#inputInstructions").val().trim(),
             cook_time: parseInt($("#inputCook").val().trim()),
             prep_time: parseInt($("#inputPrep").val().trim()),
-        };
-        $.post("/api/recipe", newRecipe)
-        .then(function (data) {
-            console.log(data);
+
+        }
+        console.log(newRecipe)
+        $.ajax("/api/recipe",{
+            type: "POST",
+            data: newRecipe
+          }).then(
+            function() {
+            // console.log()
+     
+
                 console.log("created new recipe");
             }
         );
-    }
+    };
 
     //this is for ingredients being added
     var ingredientsArray = [];
@@ -65,7 +61,7 @@ $(document).ready(function () {
         event.preventDefault();
         
         var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
-        // console.log(oneIngredient)
+        console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
         $("#inputAmount").val(" ");
         $("#inputMeasurement").val(" ");
@@ -73,7 +69,7 @@ $(document).ready(function () {
         console.log(ingredientsArray)
         // before empty append ingredient on 76 so they can see add ingredients in new div under
         // console.log(ingredientsArray)
-    }
+    };
 
 
 
