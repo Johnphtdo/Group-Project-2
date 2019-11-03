@@ -12,22 +12,17 @@ $(document).ready(function () {
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
-        }
-        $.ajax("/api/users", {
-            type: "POST",
-            data: userIn,
-          }).then(
-            function () {
-                console.log("Im in");
-                // Reload the page to get the update
-                location.reload();
-            }
-        );
-    };
 
-    function signUp(event) {
-        event.preventDefault();
-    };
+
+        var newUser = {
+            user_name: $('#inputUser').val().trim(),
+            password: $('#inputPassword1').val().trim(),
+        }; $.post('/users/register', newUser).then(function(data){
+            console.log(data);
+            console.log("New User")
+        })
+    }
+
 
     function searchRecipe(event) {
         event.preventDefault();
@@ -35,6 +30,7 @@ $(document).ready(function () {
 
     function recipeSubmit(event) {
         event.preventDefault();
+        
         var newRecipe = {
             recipe_name: $("#inputRecipeName").val().trim(),
             user_name: $("#inputUserName").val().trim(),
@@ -42,6 +38,7 @@ $(document).ready(function () {
             instructions: $("#inputInstructions").val().trim(),
             cook_time: parseInt($("#inputCook").val().trim()),
             prep_time: parseInt($("#inputPrep").val().trim()),
+
         }
         console.log(newRecipe)
         $.ajax("/api/recipe",{
@@ -49,7 +46,9 @@ $(document).ready(function () {
             data: newRecipe
           }).then(
             function() {
-            // console.log();
+            // console.log()
+     
+
                 console.log("created new recipe");
             }
         );
@@ -60,6 +59,7 @@ $(document).ready(function () {
 
     function addIngredient(event) {
         event.preventDefault();
+        
         var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);

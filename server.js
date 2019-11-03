@@ -1,6 +1,11 @@
 // * Requires
 const express = require("express");
 const exphbs = require("express-handlebars");
+const bcrypt = require("bcrypt");
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy;
+
+
 var db = require("./models");
 
 /* ----------------------------------------------
@@ -20,7 +25,7 @@ app.use(express.json());
 
 // * Adding routes
 require("./routes/api-routes")(app); //include the controller file
-
+require("./routes/users-routes")(app); //include the controller file
 /* ----------------------------------------------
  * SET UP Handlebars
  * ---------------------------------------------- */
