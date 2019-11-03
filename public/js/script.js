@@ -9,6 +9,7 @@ $(document).ready(function () {
     function signIn(event) {
         event.preventDefault();
 
+        //this was in the master along with the below not sure which one is legit
         // var userIn = {
         //     user_name: $("#inputUser").val().trim(),
         //     password: $("#inputPassword1").val().trim(),
@@ -28,6 +29,7 @@ $(document).ready(function () {
         event.preventDefault();
     };
 
+    //need a validation that they have signed in before running function
     function recipeSubmit(event) {
         event.preventDefault();
         
