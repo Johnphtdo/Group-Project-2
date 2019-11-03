@@ -106,11 +106,11 @@ Contributions are what make the open source community such an amazing place to b
 Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/Johnphtdo/Group-Project-2)
 
 ### John Do
-
+[Github Portfolio](https://github.com/Johnphtdo)[LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
 ### Kala Elam
 
 ### Jasmine Tsai
-[Github Portfolio](https://jtsai972.github.io/Github-Portfolio/) | [Website - Jtsai972.space](jtsai972.space) | [Email Me](jtsai972@gmail.com) | [Linked In](https://www.linkedin.com/in/jasmine-tsai/)
+[Github Portfolio](https://jtsai972.github.io/Github-Portfolio/) | [Website - Jtsai972.space](jtsai972.space) | [Email Me](jtsai972@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jasmine-tsai/)
 
 [Back to Table of Contents](#table-of-contents)
 
