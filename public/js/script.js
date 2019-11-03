@@ -46,6 +46,7 @@ $(document).ready(function () {
             data: newRecipe
           }).then(
             function() {
+                $('#showMeTheModal').modal('toggle');
             // console.log()
                 console.log("created new recipe");
             }
