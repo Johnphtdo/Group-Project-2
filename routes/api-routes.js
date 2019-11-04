@@ -72,6 +72,16 @@ module.exports = function(app){
         });
     });
 
+    app.put("/api/recipe", function(req,res){
+        db.Recipe.update(
+            req.body,
+            {
+                where: {recipe_name: req.body.recipe_name
+            }
+        }).then(function(data){
+            res.json(data);
+        });
+    });
     // passport.authenticate('local', { successRedirect: '/add-recipe',
     // failureRedirect: '/users/login',}),
 
