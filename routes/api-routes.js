@@ -13,15 +13,22 @@ module.exports = function(app){
         res.render("index");
     });
 
+     // Routes for the Recipe Table
+     app.get("/view-recipe", function(req, res) {
+        res.render("partials/view-block");
+    });
+
 
     // GET route for getting all recipes by User
-    app.get("/api/recipe/:user_name", function(req, res){
+    app.get("/api/user/:user_name", function(req, res){
+        console.log(req.params.user_name);
         db.Recipe.findAll({
             where: {
                 user_name: req.params.user_name
             }
         }).then(function(data){
             res.json(data);
+            console.log(data)
         });
     });
 
@@ -38,8 +45,7 @@ module.exports = function(app){
     });
     // POST route for saving a new recipe
 
-    app.post("/api/recipe",  passport.authenticate('local', { successRedirect: '/add-recipe',
-    failureRedirect: '/users/login',}), function(req,res){
+    app.post("/api/recipe",   function(req,res){
 
 
         db.Recipe.create({
@@ -62,5 +68,8 @@ module.exports = function(app){
             res.json(data);
         });
     });
+
+    // passport.authenticate('local', { successRedirect: '/add-recipe',
+    // failureRedirect: '/users/login',}),
 
 }

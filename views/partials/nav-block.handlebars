@@ -27,21 +27,23 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <div class="btn-group">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="searchRecipe" id="searchMe">
-                Search by
-            </button>
+                <input class="form-control mr-sm-2" id="searchwhat" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="searchRecipe" id="searchMe">
+                    Search by
+                </button>   
                 <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="sr-only">Toggle Dropdown</span>
+                    <span class="sr-only selection">Toggle Dropdown</span>
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/view-recipe">Search by User Name</a>
-                    <a class="dropdown-item" href="/view-recipe">Search by Recipe Name</a>
+                    <li class="dropdown-item searchBtn" data-text="Search by User Name">Search by User Name
+                    </li>
+                    <li class="dropdown-item searchBtn" data-text="Search by Recipe Name">Search by Recipe Name
+                    </li>
                     {{!-- <a class="dropdown-item" href="#"></a> --}}
                 </div>
             </div>
-            
+
         </form>
     </div>
 </nav>
