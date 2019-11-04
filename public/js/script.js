@@ -13,7 +13,7 @@ $(document).ready(function () {
         };
         $.post('/users/login', userIn).then(function (data) {
             // console.log(data);
-            console.log("Signed In")
+            
         })
     }
 
@@ -23,6 +23,7 @@ $(document).ready(function () {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
         };
+
         $.post('/users/register', newUser).then(function (data) {
             console.log(data);
             console.log("New User")
