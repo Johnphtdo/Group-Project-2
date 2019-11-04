@@ -16,17 +16,28 @@ module.exports = function(app) {
   // POST route for the User_names
   app.post("/users/register", function(req, res) {
     var userPW = req.body.password;
+    var usernameInput = req.body.user_name
+    db.Users.findOne({where:{user_name: usernameInput}}).then(function(data){
+      if (data){
+        console.log("Username already exist")
+      
+      }
+    
+    else{
+      console.log(data)
     bcrypt.genSalt(saltRounds, function(err, salt) {
       bcrypt.hash(userPW, salt, function(err, hash) {
         db.Users.create({
-          user_name: req.body.user_name,
+          user_name: usernameInput,
           password: hash
         }).then(function(data) {
+          console.log("New User Created")
           res.json(data);
         });
       });
     });
-  });
+    }
+  })});
 
   //login page: storing and comparing username and password,and redirecting to / page after login
   app.post("/users/login", function(req, res) {
@@ -41,6 +52,7 @@ module.exports = function(app) {
       } else {
         bcrypt.compare(userPW, user.password, function(err, result) {
           if (result == true) {
+            console.log("Logged In")
             res.redirect("/");
           } else {
             res.send("Incorrect password");
