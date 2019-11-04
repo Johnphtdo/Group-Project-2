@@ -15,6 +15,7 @@ $(document).ready(function () {
 
         }
     }
+    
     function signUp(event){
         event.preventDefault();
         var newUser = {
