@@ -4,17 +4,13 @@ var passport = require("passport")
 // Routes
 
 module.exports = function(app){
-   // Route for adding recipe page
+   // here so that I can check form for styling
     app.get("/add-recipe", function(req, res) {
         res.render("partials/add-block");
     });
  // Routes for the Recipe Table
     app.get("/", function(req, res) {
         res.render("index");
-    });
-// Route for Recipe pages
-    app.get("/view-recipe", function(req, res) {
-        res.render("partials/view-block");
     });
 
 
@@ -44,6 +40,7 @@ module.exports = function(app){
 
     app.post("/api/recipe",  passport.authenticate('local', { successRedirect: '/add-recipe',
     failureRedirect: '/users/login',}), function(req,res){
+
 
         db.Recipe.create({
             user_name: req.body.user_name,
