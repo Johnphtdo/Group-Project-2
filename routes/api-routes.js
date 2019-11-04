@@ -1,6 +1,6 @@
 // Requiring our recipe models
 var db = require("../models");
-
+var passport = require("passport")
 // Routes
 
 module.exports = function(app){
@@ -38,7 +38,8 @@ module.exports = function(app){
     });
     // POST route for saving a new recipe
 
-    app.post("/api/recipe", function(req,res){
+    app.post("/api/recipe",  passport.authenticate('local', { successRedirect: '/add-recipe',
+    failureRedirect: '/users/login',}), function(req,res){
 
 
         db.Recipe.create({

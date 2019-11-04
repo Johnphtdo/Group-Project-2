@@ -44,7 +44,7 @@ module.exports = function(app) {
             res.redirect("/");
           } else {
             res.send("Incorrect password");
-            res.redirect("/");
+            res.redirect("/users/login");
           }
         });
       }
