@@ -38,10 +38,26 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 /* ----------------------------------------------
+ * SET UP Sync
+ * ---------------------------------------------- */
+var syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+/* ----------------------------------------------
  * START Server
  * ---------------------------------------------- */
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
-    console.log("App now listening at http://localhost:" + PORT);
+    //console.log("App now listening at http://localhost:" + PORT);
+    console.log(
+      "==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
   });
 });
