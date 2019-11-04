@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     $(document).on("click", "#signIn", signIn);
-    // $(document).on("click", "#signUp", signUp);
+    $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
     $(document).on("click", "#recipe-form", recipeSubmit);
     $(document).on("click", "#addIngredient", addIngredient);
@@ -9,13 +9,16 @@ $(document).ready(function () {
     function signIn(event) {
         event.preventDefault();
 
-        //this was in the master along with the below not sure which one is legit
-        // var userIn = {
-        //     user_name: $("#inputUser").val().trim(),
-        //     password: $("#inputPassword1").val().trim(),
 
-        // }
-}
+        var userIn = {
+            user_name: $("#inputUser").val().trim(),
+            password: $("#inputPassword1").val().trim(),
+        };
+        $.post('/users/login', userIn).then(function(data){
+            // console.log(data);
+            console.log("Signed In")
+        })
+    }
     
     function signUp(event){
         event.preventDefault();
@@ -23,9 +26,8 @@ $(document).ready(function () {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
 
-        }; 
+        };
         $.post('/users/register', newUser).then(function(data){
-
             console.log(data);
             console.log("New User")
         })
