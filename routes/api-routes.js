@@ -42,7 +42,9 @@ module.exports = function(app){
     // POST route for saving a new recipe
 
     app.post("/api/recipe", function(req,res){
-
+// Commented this out for now until I get passport to work
+//  passport.authenticate('local', { successRedirect: '/add-recipe',
+// failureRedirect: '/users/login',})
 
         db.Recipe.create({
             user_name: req.body.user_name,
