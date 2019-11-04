@@ -14,7 +14,7 @@ $(document).ready(function () {
         //     user_name: $("#inputUser").val().trim(),
         //     password: $("#inputPassword1").val().trim(),
 
-        }
+        // }
     }
     
     function signUp(event){
