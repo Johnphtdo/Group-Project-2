@@ -1,12 +1,12 @@
 // * Requires
-const express = require("express");
-const exphbs = require("express-handlebars");
-const bcrypt = require("bcrypt");
+const express = require('express');
+const exphbs = require('express-handlebars');
+const bcrypt = require('bcrypt');
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
+const passportConfig = require('./config/passport')
 
-
-var db = require("./models");
+var db = require('./models');
 
 /* ----------------------------------------------
  * SET UP App
@@ -22,6 +22,10 @@ app.use(express.static("public"));
 // * App parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// App passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // * Adding routes
 require("./routes/api-routes")(app); //include the controller file

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Johnphtdo/Group-Project-2#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql2": "^2.0.0",
