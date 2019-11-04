@@ -9,6 +9,7 @@ $(document).ready(function () {
     function signIn(event) {
         event.preventDefault();
 
+
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
