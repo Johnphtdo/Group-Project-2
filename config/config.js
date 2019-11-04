@@ -1,8 +1,11 @@
-{
+const dotenv = require("dotenv");
+dotenv.config({path: __dirname + "/../.env"});
+
+module.exports = {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "recipe_db",
+    "username": process.env.DEV_USER,
+    "password": process.env.DEV_PASS,
+    "database": process.env.DEV_DATA,
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
@@ -16,10 +19,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql",
     "operatorsAliases": false
   }
