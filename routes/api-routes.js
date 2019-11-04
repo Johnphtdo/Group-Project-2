@@ -13,6 +13,9 @@ module.exports = function(app){
         res.render("index");
     });
 
+    app.get("/view-recipe",function(req,res){
+        res.render("partials/view-block")
+    });
 
     // GET route for getting all recipes by User
     app.get("/api/recipe/:user_name", function(req, res){
@@ -38,9 +41,10 @@ module.exports = function(app){
     });
     // POST route for saving a new recipe
 
-    app.post("/api/recipe",  passport.authenticate('local', { successRedirect: '/add-recipe',
-    failureRedirect: '/users/login',}), function(req,res){
-
+    app.post("/api/recipe", function(req,res){
+// Commented this out for now until I get passport to work
+//  passport.authenticate('local', { successRedirect: '/add-recipe',
+// failureRedirect: '/users/login',})
 
         db.Recipe.create({
             user_name: req.body.user_name,

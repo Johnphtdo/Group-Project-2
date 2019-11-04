@@ -16,7 +16,7 @@ $(document).ready(function () {
         };
         $.post('/users/login', userIn).then(function(data){
             // console.log(data);
-            console.log("Signed In")
+            
         })
     }
     
@@ -28,11 +28,9 @@ $(document).ready(function () {
 
         };
         $.post('/users/register', newUser).then(function(data){
-            console.log(data);
-            console.log("New User")
+            
         })
     }
-
 
     function searchRecipe(event) {
         event.preventDefault();
