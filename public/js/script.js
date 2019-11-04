@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
     $(document).on("click", "#signIn", signIn);
-    $(document).on("click", "#signUp", signUp);
+    // $(document).on("click", "#signUp", signUp);
     $(document).on("click", "#searchRecipe", searchRecipe);
     $(document).on("click", "#recipe-form", recipeSubmit);
     $(document).on("click", "#addIngredient", addIngredient);
@@ -9,9 +9,10 @@ $(document).ready(function () {
     function signIn(event) {
         event.preventDefault();
 
-        var userIn = {
-            user_name: $("#inputUser").val().trim(),
-            password: $("#inputPassword1").val().trim(),
+        //this was in the master along with the below not sure which one is legit
+        // var userIn = {
+        //     user_name: $("#inputUser").val().trim(),
+        //     password: $("#inputPassword1").val().trim(),
 
         }
     }
@@ -21,8 +22,10 @@ $(document).ready(function () {
         var newUser = {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
+
         }; 
         $.post('/users/register', newUser).then(function(data){
+
             console.log(data);
             console.log("New User")
         })
@@ -33,6 +36,7 @@ $(document).ready(function () {
         event.preventDefault();
     };
 
+    //need a validation that they have signed in before running function
     function recipeSubmit(event) {
         event.preventDefault();
         
@@ -51,9 +55,8 @@ $(document).ready(function () {
             data: newRecipe
           }).then(
             function() {
+                $('#showMeTheModal').modal('toggle');
             // console.log()
-     
-
                 console.log("created new recipe");
             }
         );
@@ -64,10 +67,13 @@ $(document).ready(function () {
 
     function addIngredient(event) {
         event.preventDefault();
-        
-        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " &";
+        //need to remove & and insert commas where split occurs
+        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " ,";
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
+        // var addIngreed = $("<p>");
+        $('.ingredientsInMe').append(oneIngredient);
+        // addIngreed.append(ingredientsArray);
         $("#inputAmount").val(" ");
         $("#inputMeasurement").val(" ");
         $("#inputIngredient").val(" ");
@@ -75,7 +81,5 @@ $(document).ready(function () {
         // before empty append ingredient on 76 so they can see add ingredients in new div under
         // console.log(ingredientsArray)
     };
-
-
 
 })

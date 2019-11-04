@@ -1,27 +1,30 @@
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        {{!-- <a class="navbar-brand" href="#">Somerecipes<i class="fas fa-utensils"></i></a> --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="/add-recipe">Add Recipe</a>
-                    </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Login
-                    </a>
-                    </a>
-                    {{!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{!-- <a class="navbar-brand" href="#">Somerecipes<i class="fas fa-utensils"></i></a> --}}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/view-recipe">View Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/add-recipe">Add Recipe</a>
+            </li>
+            {{!-- <li class="nav-item">
+                <a class="nav-link" href="#blog">Blog</a>
+            </li> --}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Login
+                </a>
+                </a>
+                {{!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div class="form-group">
                             <label for="inputUser">User Name</label>
                             <input type="email" class="form-control" id="inputUser"
@@ -35,14 +38,13 @@
                         <button type="signIn" class="btn btn-primary" id="signIn">Sign In</button>
                         <button type="signUp" class="btn btn-primary" id="signUp">Sign Up</button>
                     </div> --}}
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="searchRecipe">
-                    Search
-                </button>
-            </form>
-        </div>
-    </nav>
- 
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="searchRecipe" id="searchMe">
+                Search
+            </button>
+        </form>
+    </div>
+</nav>
