@@ -42,6 +42,6 @@ app.set("view engine", "handlebars");
  * ---------------------------------------------- */
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
-    console.log("App now listening at http://localhost:" + PORT);
+    console.log("App now listening at http://localhost:%s/", PORT);
   });
 });
