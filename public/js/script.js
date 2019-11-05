@@ -1,6 +1,27 @@
-$(".nav-item").on("click", function() {
+// $(".navbar-nav .nav-item").on("click", function() {
+//     $(".nav-item").removeClass("active");
+//     console.log($(this));
+// });
+
+$(function(){
+    var current = location.pathname;
+    console.log(current)
+
+    if(current === "/") {
+        $('.nav-item.home').addClass('bg-info');
+    } else {
+        $('.navbar-nav .nav-item .nav-link').each(function(){
+            var $this = $(this);
+            var link = $this.attr('href');
     
-});
+            // if the current path is like this link, make it active
+            if(link.indexOf(current) !== -1){
+                $this.parent().addClass('bg-info');
+                $this.addClass("text-light");
+            }
+        })
+    }    
+})
 
 $(document).ready(function () {
 

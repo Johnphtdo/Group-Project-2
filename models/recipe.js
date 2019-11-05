@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Recipe = sequelize.define("Recipe", {
+  var Recipe = sequelize.define(
+    "Recipe",
+    {
       user_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -16,22 +18,24 @@ module.exports = function(sequelize, DataTypes) {
       },
       ingredients: {
         type: DataTypes.STRING(400),
-        allowNull: false,
-      }, 
+        allowNull: false
+      },
       instructions: {
         type: DataTypes.STRING(1200),
-        allowNull: false,
+        allowNull: false
       },
       cook_time: {
-       type: DataTypes.INTEGER,
-       allowNull: false,
-      }, 
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       prep_time: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: false
       }
-    }, {
+    },
+    {
       timestamps: false
-    });
-    return Recipe;
-  };
+    }
+  );
+  return Recipe;
+};
