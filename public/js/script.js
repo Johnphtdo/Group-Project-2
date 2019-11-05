@@ -90,7 +90,7 @@ $(document).ready(function () {
     $(document).on("click", "#searchMe", function () {
         event.preventDefault();
         var url;
-        var userInput = $("#searchwhat").val();
+        var userInput = $("#searchwhat").val().trim();
         if ($("#searchMe").attr("data-value") === "user_name") {
             url = "user";
         } else {

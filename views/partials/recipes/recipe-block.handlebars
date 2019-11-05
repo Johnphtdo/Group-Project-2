@@ -6,7 +6,9 @@
 <h2>Ingredients</h2>
 <ul>
     <!-- Use javascript to split the string by comma to post -->
-    {{ingredients}}
+     {{#each ingredients}}
+    <li>{{this}}</li>
+    {{/each}}
 </ul>
 
 <h2>Instructions</h2>
