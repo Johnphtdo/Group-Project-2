@@ -32,26 +32,47 @@ $(document).ready(function () {
 
     function signIn(event) {
         event.preventDefault();
+        $(".alert").hide();
         var userIn = {
             user_name: $("#inputUser").val().trim(),
             password: $("#inputPassword1").val().trim(),
         };
         $.post('/users/login', userIn).then(function (data) {
-            // console.log(data);
-            
+        
+        if(data == "User Does not Exist"){
+            $("#usernameAlert").show();
+        }
+        else if(data == "Incorrect password"){
+            $("#passwordAlert").show();
+        }
+        else{
+            console.log(data)
+            $("#successfulAlert").show();
+        }
+
         })
     }
 
     function signUp(event) {
         event.preventDefault();
+        $(".alert").hide();
         var newUser = {
             user_name: $('#inputUser').val().trim(),
             password: $('#inputPassword1').val().trim(),
         };
 
         $.post('/users/register', newUser).then(function (data) {
+            if(data == "Username already exists"){
+            $("#usernameExist").show();
+            }
+            else if (data == "Fields Cannot Be Empty"){
+            $("#fieldsEmpty").show();
+            }
+            else {
             console.log(data);
             console.log("New User")
+            $("#signUpAlert").show();
+            }
         })
     }
 
