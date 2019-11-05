@@ -34,8 +34,10 @@ module.exports = function (app) {
                 user_name: req.params.user_name
             }
         }).then(function (data) {
-            res.json(data);
-            // console.log(data);
+           
+            var handlebarsObj = data
+            console.log(handlebarsObj)
+            res.render("user", handlebarsObj)
         });
     });
 
