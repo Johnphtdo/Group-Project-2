@@ -1,3 +1,4 @@
+
 body {
     background-color: gainsboro;
 }
@@ -108,4 +109,12 @@ footer {
     position: absolute;
     z-index: -1;   
   }
+
+.navbar { padding: 0; }
+.nav-item { padding: 0.25rem 1rem; }
+
+.alert {
+    display: none;
+}
+
 
