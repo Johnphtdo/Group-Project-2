@@ -2,71 +2,74 @@
     This is the add recipe page
 -->
 {{> nav-block }}
-<form>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputRecipeName">Recipe Name</label>
-            <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
-        </div>
-        <div class="form-group col-md-6">
-            <label for="inputUserName">Created by:</label>
-            <input type="text" class="form-control" id="inputUserName" placeholder="KalaCANcook" />
-        </div>
-    </div>
-
-    <!-- This may have to be created dynamically so that you keep adding more ingredients -->
-    <div class="form-row">
-        <div class="form-group col-md-2">
-            <label for="inputAmount">Amount</label>
-            <input type="text" class="form-control" id="inputAmount" placeholder="1.5" />
-            <select id="inputMeasurement" class="form-row">
-                <option selected></option>
-                <option>Teaspoon(s)</option>
-                <option>Tablespoon(s)</option>
-                <option>Cup(s)</option>
-                <option>Ounce(s)</option>
-                <option>Pint(s)</option>
-                <option>Quart(s)</option>
-                <option>Gallon(s)</option>
-                <option>Pound(s)</option>
-            </select>
-        </div>
-        <div class="form-group col-md-8">
-            <label for="inputIngredient">Ingredient</label>
-            <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
-        </div>
-    </div>
-    <button type="submit" id="addIngredient" class="btn btn-primary">Add Ingredient!</button>
-    <br>
-    <hr>
-    <div class="ingredientsInMe">
-        <h5>Ingredients:</h5>
-
-    </div>
-    <br>
-    <hr>
-    <!-- This may have to be created dynamically so that you keep adding more ingredients -->
-
-    <div class="form-group">
-        <label for="inputInstructions">Instructions</label>
-        <input type="text" class="form-control" id="inputInstructions" />
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-2">
-            <label for="inputCook">Cook Time</label>
-            <input type="text" class="form-control" id="inputCook" />
+<div class="container">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputRecipeName">Recipe Name</label>
+                <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputUserName">Created by:</label>
+                <input type="text" class="form-control" id="inputUserName" placeholder="KalaCANcook" />
+            </div>
         </div>
 
-        <div class="form-group col-md-2">
-            <label for="inputPrep">Prep Time</label>
-            <input type="text" class="form-control" id="inputPrep" />
+        <!-- This may have to be created dynamically so that you keep adding more ingredients -->
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputAmount">Amount</label>
+                <input type="text" class="form-control" id="inputAmount" placeholder="1.5" />
+                <select id="inputMeasurement" class="form-row">
+                    <option selected></option>
+                    <option>Teaspoon(s)</option>
+                    <option>Tablespoon(s)</option>
+                    <option>Cup(s)</option>
+                    <option>Ounce(s)</option>
+                    <option>Pint(s)</option>
+                    <option>Quart(s)</option>
+                    <option>Gallon(s)</option>
+                    <option>Pound(s)</option>
+                </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="inputIngredient">Ingredient</label>
+                <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
+            </div>
         </div>
-    </div>
+        <button type="submit" id="addIngredient" class="btn btn-primary">Add Ingredient!</button>
+        <br>
+        <hr>
+        <div class="ingredientsInMe">
+            <h5>Ingredients:</h5>
 
-    <button type="submit" id="recipe-form" class="btn btn-primary">
-        Save Recipe!
-    </button>
-</form>
+        </div>
+        <br>
+        <hr>
+        <!-- This may have to be created dynamically so that you keep adding more ingredients -->
+
+        <div class="form-group">
+            <label for="inputInstructions">Instructions</label>
+            <input type="text" class="form-control" id="inputInstructions" />
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputCook">Cook Time</label>
+                <input type="text" class="form-control" id="inputCook" />
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="inputPrep">Prep Time</label>
+                <input type="text" class="form-control" id="inputPrep" />
+            </div>
+        </div>
+
+        <button type="submit" id="recipe-form" class="btn btn-primary">
+            Save Recipe!
+        </button>
+    </form>
+</div>
+
 
 {{!-- <div id="showMeTheModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
