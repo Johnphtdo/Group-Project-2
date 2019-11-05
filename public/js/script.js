@@ -1,3 +1,7 @@
+$(".nav-item").on("click", function() {
+    
+});
+
 $(document).ready(function () {
 
     $(document).on("click", "#signIn", signIn);
