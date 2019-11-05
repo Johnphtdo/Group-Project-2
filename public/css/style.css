@@ -5,7 +5,22 @@ body {
 .jumbotron {
     background-image: url("/images/garlic.jpeg");
     background-size: cover;
+    /* background-position: center 30%; */
+    position: relative;
 }
+
+/* .jumbotron:after {
+    background-image: url("/images/garlic.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    opacity:0.5;
+    z-index: -1;
+} */
 
 input.form-control {
     /* box-sizing: content-box; */
@@ -34,3 +49,63 @@ footer {
     height: 90px; 
     flex-shrink: 0;
   }
+
+.addRecipeForm {
+    /* background-image: url("/images/garlic.jpeg"); */
+    /* background-size: cover;
+    background-position: center; */
+    /* background-color: rgba(247, 246, 243, 0.897); */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    border: 1px solid white;
+}
+
+.addRecipeForm::after {
+    content: "";
+    background: url("/images/garlic.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+.giveMeSpace {
+    background-image: ;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.noUglyBlue {
+    background-color: white;
+    color: black
+}
+
+.logInMe {
+    position: relative;
+    border: 1px solid white;
+    /* background-color: whitesmoke; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+.logInMe::after {
+    content: "";
+    background: url("/images/spice.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+

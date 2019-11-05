@@ -1,9 +1,9 @@
 <!-- This is the add recipe page -->
-<div class="container">
-    <form>
+<div class="container addRecipeForm">
+    <form class="giveMeSpace">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputRecipeName">Recipe Name</label>
+                <label for="inputRecipeName">Recipe Name:</label>
                 <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
             </div>
             <div class="form-group col-md-6">
@@ -15,7 +15,7 @@
         <!-- This may have to be created dynamically so that you keep adding more ingredients -->
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="inputAmount">Amount</label>
+                <label for="inputAmount">Amount:</label>
                 <input type="text" class="form-control" id="inputAmount" placeholder="1.5" />
                 <select id="inputMeasurement" class="form-row">
                     <option selected></option>
@@ -30,11 +30,11 @@
                 </select>
             </div>
             <div class="form-group col-md-8">
-                <label for="inputIngredient">Ingredient</label>
+                <label for="inputIngredient">Ingredient:</label>
                 <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
             </div>
         </div>
-        <button type="submit" id="addIngredient" class="btn btn-primary">Add Ingredient!</button>
+        <button type="submit" id="addIngredient" class="btn noUglyBlue">Add Ingredient!</button>
         <br>
         <hr>
         <div class="ingredientsInMe">
@@ -46,22 +46,22 @@
         <!-- This may have to be created dynamically so that you keep adding more ingredients -->
 
         <div class="form-group">
-            <label for="inputInstructions">Instructions</label>
+            <label for="inputInstructions">Instructions:</label>
             <input type="text" class="form-control" id="inputInstructions" />
         </div>
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="inputCook">Cook Time</label>
+                <label for="inputCook">Cook Time:</label>
                 <input type="text" class="form-control" id="inputCook" />
             </div>
 
             <div class="form-group col-md-2">
-                <label for="inputPrep">Prep Time</label>
+                <label for="inputPrep">Prep Time:</label>
                 <input type="text" class="form-control" id="inputPrep" />
             </div>
         </div>
 
-        <button type="submit" id="recipe-form" class="btn btn-primary">
+        <button type="submit" id="recipe-form" class="btn noUglyBlue">
             Save Recipe!
         </button>
     </form>
