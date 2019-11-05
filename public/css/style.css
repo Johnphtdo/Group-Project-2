@@ -9,26 +9,12 @@ body {
     position: relative;
 }
 
-/* .jumbotron:after {
-    background-image: url("/images/garlic.jpeg");
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    opacity:0.5;
-    z-index: -1;
-} */
-
 input.form-control {
     /* box-sizing: content-box; */
-    /* border: none; */
-    /* border-bottom: 1px solid black; */
-    box-shadow: none;
+    /* border: none;
+    border-bottom: 1px solid black; */
+    box-shadow: none !important;
 }
-
 
 input:hover, 
 input:active,  
@@ -51,10 +37,6 @@ footer {
   }
 
 .addRecipeForm {
-    /* background-image: url("/images/garlic.jpeg"); */
-    /* background-size: cover;
-    background-position: center; */
-    /* background-color: rgba(247, 246, 243, 0.897); */
     margin-top: 50px;
     margin-bottom: 30px;
     position: relative;
@@ -140,3 +122,8 @@ footer {
   .alert {
      display: none;
   }
+
+.blackBetty {
+    color: whitesmoke;
+    background-color: black;
+}
