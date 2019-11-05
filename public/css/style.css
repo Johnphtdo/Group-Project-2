@@ -5,7 +5,6 @@ body {
 .jumbotron {
     background-image: url("/images/garlic.jpeg");
     background-size: cover;
-    /* background-position: center 30%; */
     position: relative;
 }
 
@@ -115,11 +114,6 @@ footer {
     z-index: -1;   
   }
 
-/* .logInMe {
-    display: flex;
-    justify-content: center;
-} */
-
   .navbar { padding: 0; }
   .nav-item { padding: 0.25rem 1rem; }
   .alert {
@@ -129,4 +123,21 @@ footer {
 .blackBetty {
     color: whitesmoke;
     background-color: black;
+}
+
+#searchMe {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #ced4da;
+    
+}
+
+#searchMe:hover {
+    color: black;
+    border: 1px solid slategray;
+}
+
+#iAmCentered {
+    display: flex;
+    justify-content: center;
 }
