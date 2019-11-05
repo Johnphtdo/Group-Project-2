@@ -46,7 +46,9 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-            res.json(data);
+            var handlebarsObj = data.dataValues
+            // console.log(handlebarsObj)
+            res.render("recipe", handlebarsObj)
         });
     });
     // POST route for saving a new recipe

@@ -103,7 +103,9 @@ $(document).ready(function () {
             type: "GET",
         }).then(
                 function (data) {
-                    console.log(data);
+                    // console.log(data);
+                    window.location.href = query
+                    console.log(query);
 
                 })
     });
