@@ -2,17 +2,17 @@
     This is the add recipe page
 -->
 {{> nav-block }}
- <form>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputRecipeName">Recipe Name</label>
-                <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputUserName">Created by:</label>
-                <input type="text" class="form-control" id="inputUserName" placeholder="KalaCANcook" />
-            </div>
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputRecipeName">Recipe Name</label>
+            <input type="text" class="form-control" id="inputRecipeName" placeholder="Lemon Butter Shrimp Pasta" />
         </div>
+        <div class="form-group col-md-6">
+            <label for="inputUserName">Created by:</label>
+            <input type="text" class="form-control" id="inputUserName" placeholder="KalaCANcook" />
+        </div>
+    </div>
 
     <!-- This may have to be created dynamically so that you keep adding more ingredients -->
     <div class="form-row">
@@ -36,39 +36,39 @@
             <input type="text" class="form-control" id="inputIngredient" placeholder="Butter" />
         </div>
     </div>
-     <button type="submit" id="addIngredient" class="btn btn-primary">Add Ingredient!</button>
-     <br>
-     <hr>
-     <div class="ingredientsInMe">
-         <h5>Ingredients:</h5>
+    <button type="submit" id="addIngredient" class="btn btn-primary">Add Ingredient!</button>
+    <br>
+    <hr>
+    <div class="ingredientsInMe">
+        <h5>Ingredients:</h5>
 
     </div>
     <br>
     <hr>
-         <!-- This may have to be created dynamically so that you keep adding more ingredients -->
-         
-        <div class="form-group">
-                <label for="inputInstructions">Instructions</label>
-                <input type="text" class="form-control" id="inputInstructions" />
-            </div>
-        <div class="form-row">
-            <div class="form-group col-md-2">
-                <label for="inputCook">Cook Time</label>
-                <input type="text" class="form-control" id="inputCook" />
-            </div>
+    <!-- This may have to be created dynamically so that you keep adding more ingredients -->
 
-            <div class="form-group col-md-2">
-                <label for="inputPrep">Prep Time</label>
-                <input type="text" class="form-control" id="inputPrep" />
-            </div>
+    <div class="form-group">
+        <label for="inputInstructions">Instructions</label>
+        <input type="text" class="form-control" id="inputInstructions" />
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputCook">Cook Time</label>
+            <input type="text" class="form-control" id="inputCook" />
         </div>
 
-        <button type="submit" id="recipe-form" class="btn btn-primary">
-            Save Recipe!
-        </button>
-    </form>
+        <div class="form-group col-md-2">
+            <label for="inputPrep">Prep Time</label>
+            <input type="text" class="form-control" id="inputPrep" />
+        </div>
+    </div>
 
-    	{{!-- <div id="showMeTheModal" class="modal fade" role="dialog">
+    <button type="submit" id="recipe-form" class="btn btn-primary">
+        Save Recipe!
+    </button>
+</form>
+
+{{!-- <div id="showMeTheModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -93,4 +93,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/js/script.js"></script> --}}
-
