@@ -9,20 +9,17 @@ body {
     position: relative;
 }
 
-input.form-control {
-    /* box-sizing: content-box; */
-    /* border: none;
-    border-bottom: 1px solid black; */
-    box-shadow: none !important;
-}
-
-input:hover, 
-input:active,  
-input:focus {
+.btn:focus, 
+.btn:active,
+.btn:hover, 
+.form-control:hover, 
+.form-control:focus,
+.form-control:active {
     outline:0px !important;
     -webkit-appearance:none;
     box-shadow: none !important;
-    border: 1px solid black;
+    border: 1px solid slategray;
+    box-shadow: none;
 }
 
 footer {
