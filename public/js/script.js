@@ -150,9 +150,9 @@ $(document).ready(function () {
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
         $('.ingredientsInMe').append("<li>" + oneIngredient + "</li>");
-        $("#inputAmount").val(" ");
-        $("#inputMeasurement").val(" ");
-        $("#inputIngredient").val(" ");
+        $("#inputAmount").val("");
+        $("#inputMeasurement").val("");
+        $("#inputIngredient").val("");
         console.log(ingredientsArray)
     };
 
