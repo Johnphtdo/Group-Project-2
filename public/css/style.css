@@ -1,4 +1,3 @@
-
 body {
     background-color: whitesmoke;
 }
@@ -77,10 +76,6 @@ footer {
   }
 
 .giveMeSpace {
-<<<<<<< HEAD
-=======
-    /* background-image: ; */
->>>>>>> 66687a930ee84dafcb8ed8270d61ea5f78c79078
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -112,12 +107,4 @@ footer {
     position: absolute;
     z-index: -1;   
   }
-
-.navbar { padding: 0; }
-.nav-item { padding: 0.25rem 1rem; }
-
-.alert {
-    display: none;
-}
-
 
