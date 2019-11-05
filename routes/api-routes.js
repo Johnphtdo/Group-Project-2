@@ -34,7 +34,7 @@ module.exports = function (app) {
                 user_name: req.params.user_name
             }
         }).then(function (data) {
-           
+
             var handlebarsObj = data
             console.log(handlebarsObj)
             res.render("user", handlebarsObj)
@@ -48,8 +48,9 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-            data.ingredients = data.ingredients.trim().replace(/\s,,\s/g, ",").replace(/\s\s/g, " ").replace(/\s,/g, "").split(",");
-            console.log(data.ingredients)
+            // console.log(data.ingredients)
+            // data.ingredients = data.ingredients.split(",");
+            // console.log(data.ingredients)
             // res.json(data);
             var handlebarsObj = data.dataValues
             // console.log(handlebarsObj)
