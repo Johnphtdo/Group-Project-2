@@ -1,5 +1,5 @@
 body {
-    background-color: gainsboro;
+    background-color: whitesmoke;
 }
 
 .jumbotron {
@@ -76,7 +76,6 @@ footer {
   }
 
 .giveMeSpace {
-    background-image: ;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -97,7 +96,7 @@ footer {
 
 .logInMe::after {
     content: "";
-    background: url("/images/spice.jpeg");
+    background: url("/images/spiceofyourlife 2.jpeg");
     background-size: cover;
     background-position: center;
     opacity: 0.3;
