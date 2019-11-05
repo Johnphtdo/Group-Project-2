@@ -17,9 +17,14 @@ module.exports = function(app) {
   app.post("/users/register", function(req, res) {
     var userPW = req.body.password;
     var usernameInput = req.body.user_name
+    if (!userPW || !usernameInput) {
+      res.send("Fields Cannot Be Empty")
+    }
+    else {
     db.Users.findOne({where:{user_name: usernameInput}}).then(function(data){
       if (data){
         console.log("Username already exist")
+        res.send("Username already exists")
       
       }
     
@@ -37,7 +42,7 @@ module.exports = function(app) {
       });
     });
     }
-  })});
+  })}});
 
   //login page: storing and comparing username and password,and redirecting to / page after login
   app.post("/users/login", function(req, res) {
@@ -48,6 +53,7 @@ module.exports = function(app) {
       }
     }).then(function(user) {
       if (!user) {
+        res.send("User Does not Exist")
         res.redirect("/");
       } else {
         bcrypt.compare(userPW, user.password, function(err, result) {
