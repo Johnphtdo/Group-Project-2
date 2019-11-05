@@ -1,3 +1,36 @@
 body {
     background-color: gainsboro;
 }
+
+.jumbotron {
+    background-image: url("/images/garlic.jpeg");
+    background-size: cover;
+}
+
+input.form-control {
+    /* box-sizing: content-box; */
+    /* border: none; */
+    /* border-bottom: 1px solid black; */
+    box-shadow: none;
+}
+
+
+input:hover, 
+input:active,  
+input:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border: 1px solid red;
+}
+
+footer {
+    padding: 30px 0;
+    clear: both;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    /* background: rgb(204, 187, 238); */
+    height: 90px; 
+    flex-shrink: 0;
+  }
