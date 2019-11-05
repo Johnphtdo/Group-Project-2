@@ -36,7 +36,7 @@ input:focus {
     outline:0px !important;
     -webkit-appearance:none;
     box-shadow: none !important;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 footer {
@@ -97,6 +97,33 @@ footer {
 .logInMe::after {
     content: "";
     background: url("/images/spiceofyourlife 2.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+.card {
+    background: transparent;
+}  
+
+.recipeInMe {
+    position: relative;
+    border: 1px solid white;
+    /* background-color: whitesmoke; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+.recipeInMe::after {
+    content: "";
+    background: url("/images/eggie.jpeg");
     background-size: cover;
     background-position: center;
     opacity: 0.3;
