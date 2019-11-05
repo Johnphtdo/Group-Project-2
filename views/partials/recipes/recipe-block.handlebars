@@ -1,9 +1,12 @@
-<h1>{{recipe_name}}</h1>
-<p>Created by: {{user_name}}</p>
-<p>Prep time: {{prep_time}}</p>
-<p>Cook time: {{cook_time}}</p>
+<div class="container recipeInMe">
+<h1>{{recipe_name}}</h1><p>Recipe by: {{user_name}} </p>
+<hr>
 
-<h2>Ingredients</h2>
+<p>Prep time: {{prep_time}} minutes</p>
+<p>Cook time: {{cook_time}} minutes</p>
+
+<h2>Ingredients:</h2>
+<hr>
 <ul>
     <!-- Use javascript to split the string by comma to post -->
      {{#each ingredients}}
@@ -11,5 +14,7 @@
     {{/each}}
 </ul>
 
-<h2>Instructions</h2>
+<h2>Instructions:</h2>
+<hr>
 <div>{{instructions}}</div>
+</div>
