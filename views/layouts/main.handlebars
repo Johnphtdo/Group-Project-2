@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -8,23 +9,42 @@
 
     <!-- Title -->
     <title>somerecipes!</title>
-    {{!-- BootStrap --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/8bc186352b.js" crossorigin="anonymous"></script>
+    
     <!-- Fonts -->
 
     <!-- CSS -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- custom -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
+
 <body>
+    <div class="jumbotron jumbotron-fluid mb-0 bg-info">
+        <div class="container">
+            <h1 class="display-4"></i>SomeRecipes<i class="fas fa-utensils fa-1x"></i></h1>
+            <h3>Take a recipe or leave a recipe</h3>
+            <h5>(not to be confused with allrecipes)</h5>
+            <h6><small>(we say some but we only have one)</small></h6>
+        </div>
+    </div>
+
+    {{> nav-block }}
     {{{ body }}}
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="/js/script.js"></script>
-{{!-- <script type="text/javascript" src="/js/form.js"></script> --}}
+    <!-- Scripts -->
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Chosen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/8bc186352b.js" crossorigin="anonymous"></script>
+    <!-- Custom -->
+    <script type="text/javascript" src="/js/script.js"></script>
+    {{!-- <script type="text/javascript" src="/js/form.js"></script> --}}
 </body>
+
 </html>
