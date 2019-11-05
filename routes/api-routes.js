@@ -15,7 +15,15 @@ module.exports = function (app) {
 
     // Routes for the Recipe Table
     app.get("/view-recipe", function (req, res) {
-        res.render("partials/view-block");
+        // db.Recipe
+        // .findAll({})
+        // .then(function(data){
+        //     var handlebarsObj = {
+        //     recipes: data
+        //     };
+        //     res.render("recipe", handlebarsObj);
+        // })
+        res.render("partials/recipes/view-block");
     });
 
     // GET route for getting all recipes by User
