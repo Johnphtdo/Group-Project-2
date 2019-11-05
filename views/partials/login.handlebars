@@ -1,11 +1,34 @@
-<div class="form-group">
-    <label for="inputUser">User Name</label>
-    <input type="user_name" name="user_name" class="form-control" id="inputUser" aria-describedby="emailHelp"
-        placeholder="kalaCANcook" />
+<div class="container">
+    <div class="form-group">
+        <label for="inputUser">User Name</label>
+        <input type="user_name" name="user_name" class="form-control" id="inputUser" aria-describedby="emailHelp"
+            placeholder="kalaCANcook" />
+    </div>
+    <div class="form-group">
+        <label for="inputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="inputPassword1" placeholder="PassWord13!" />
+    </div>
+    <button type="signIn" class="btn btn-primary" id="signIn">Sign In</button>
+    <button type="signUp" class="btn btn-primary" id="signUp">Sign Up</button>
+    <div class="alerts mt-3">
+        <div class="alert alert-danger" id="usernameAlert" role="alert">
+            Username Does Not Exist!
+        </div>
+        <div class="alert alert-danger" id="usernameExist" role="alert">
+            Username Already Exists!
+        </div>
+        <div class="alert alert-danger" id="fieldsEmpty" role="alert">
+            Username and Password Fields Cannot Be Empty!
+        </div>
+        <div class="alert alert-danger" id="passwordAlert" role="alert">
+            Incorrect Username and Password Combination
+        </div>
+        <div class="alert alert-success" id= "signUpAlert" role="alert">
+            Sign Up Successful!
+        </div>        
+        <div class="alert alert-success" id= "successfulAlert" role="alert">
+            Login Successful!
+        </div>
+    </div>
+
 </div>
-<div class="form-group">
-    <label for="inputPassword1">Password</label>
-    <input type="password" name="password" class="form-control" id="inputPassword1" placeholder="PassWord13!" />
-</div>
-<button type="signIn" class="btn btn-primary" id="signIn">Sign In</button>
-<button type="signUp" class="btn btn-primary" id="signUp">Sign Up</button>
