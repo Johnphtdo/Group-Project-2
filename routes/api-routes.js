@@ -40,7 +40,8 @@ module.exports = function (app) {
                 user_name: username,
                 recipes: data
             }
-            console.log(handlebarsObj)
+            // console.log(handlebarsObj)
+            // console.log(data[0].dataValues)
             res.render("user", handlebarsObj)
         });
     });

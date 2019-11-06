@@ -1,11 +1,26 @@
 <div class="container putAUserInMe">
-<h1>{{user_name}}'s Recipes</h1>
+    <h1>{{user_name}}'s Recipes</h1>
 
-<hr>
-<ul>
-    <!-- Use javascript to split the string by comma to post -->
-    {{#each recipes}}
-    <li>{{recipe_name}}</li>
-    {{/each}}
-</ul>
+    <hr>
+    <div class="row">
+        <!-- Use javascript to split the string by comma to post -->
+        {{#each recipes}}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{recipe_name}}</h5>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            Prep Time: {{prep_time}} minutes
+                        </div>
+                        <div class="col-lg-6 col-md-12 mr-3">
+                            Cook Time: {{cook_time}} minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
 </div>
