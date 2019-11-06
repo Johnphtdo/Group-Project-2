@@ -42,7 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Thi
+The purpose of this project is to demonstrate our knowledge working with MySQL, Sequelize, Handlebars and deploying it into Heroku with data. GET requests for this project can display all recipes by username, all recipes in the database, and individual recipes. POST request is available for Users to put in recipes into the database. 
 
 ### Built With
  * [MySQL](https://www.mysql.com/)
@@ -106,7 +106,7 @@ Contributions are what make the open source community such an amazing place to b
 Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/Johnphtdo/Group-Project-2)
 
 ### John Do
-[Github Portfolio](https://github.com/Johnphtdo)[LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
+[Github Portfolio](https://github.com/Johnphtdo) | [LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
 ### Kala Elam
 
 ### Jasmine Tsai
