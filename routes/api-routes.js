@@ -15,15 +15,15 @@ module.exports = function (app) {
 
     // Routes for the Recipe Table
     app.get("/view-recipe", function (req, res) {
-        // db.Recipe
-        // .findAll({})
-        // .then(function(data){
-        //     var handlebarsObj = {
-        //     recipes: data
-        //     };
-        //     res.render("recipe", handlebarsObj);
-        // })
-        res.render("partials/recipes/view-block");
+        db.Recipe
+        .findAll({})
+        .then(function(data){
+            var handlebarsObj = {
+            recipes: data
+            };
+            res.render("recipe", handlebarsObj);
+        })
+        // res.render("partials/recipes/view-block");
     });
 
     // GET route for getting all recipes by User
@@ -53,9 +53,10 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-            // console.log(data.ingredients);
+            data.ingredients = data.ingredients.replace(/,\s/g, ",").split(",");
             // res.json(data);
             var handlebarsObj = data.dataValues
+            console.log(handlebarsObj);
             // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)
         });
