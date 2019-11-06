@@ -28,7 +28,6 @@ module.exports = function (app) {
         res.render("partials/recipes/view-block", handlebarsObj);
         })
         
-
     });
 
     // GET route for getting all recipes by User
@@ -58,7 +57,8 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-           data.ingredients = data.ingredients.trim().replace(/\s,,\s/g, ",").replace(/\s\s/g, " ").replace(/\s,/g, "").split(",");
+            // console.log(data.ingredients);
+            // res.json(data);
             var handlebarsObj = data.dataValues
             // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)
