@@ -45,7 +45,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+
 This is a recipe database with CRUD functionality. People can search recipes by User or by Recipe. In order to add a recipe you would need to sign up, log in, and then add a recipe. As a user you can edit your recipes or delete your own recipes.
+
 
 ### Built With
  * [MySQL](https://www.mysql.com/)
@@ -115,7 +117,7 @@ Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/
 Heroku Demo: [https://group-project-jtjdke.herokuapp.com/](https://group-project-jtjdke.herokuapp.com/)
 
 ### John Do
-[Github Portfolio](https://github.com/Johnphtdo)[LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
+[Github Portfolio](https://github.com/Johnphtdo) | [LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
 ### Kala Elam
 
 ### Jasmine Tsai
