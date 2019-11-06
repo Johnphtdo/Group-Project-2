@@ -2,13 +2,19 @@ body {
     background-color: whitesmoke;
 }
 
-a {
+a .card-body{
+    background: rgba(255, 255, 255, 1);
     color: #212529;
     text-decoration: none;
 }
-a:hover {
-    text-decoration: none;
+a:hover .card-body { 
+    background: rgba(255, 255, 255, 0.5);
+    text-decoration: none; 
 }
+
+/* a .card-body {
+
+} */
 
 .jumbotron {
     background-image: url("/images/garlic.jpeg");
