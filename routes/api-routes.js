@@ -18,14 +18,18 @@ module.exports = function (app) {
         db.Recipe
         .findAll({})
         .then(function(data){
+            
             for(let i=0; i < data.length; i++) {
-                let ingredients = data[i].dataValues.ingredients;
-                ingredients = ingredients.split(",");
-                // console.log(ingredients);
+                data[i].dataValues.ingredients = data[i].dataValues.ingredients.replace(/,\s/g, ",").split(",");
             }
+            console.log(data);
             var handlebarsObj = {
                 recipes: data
             };
+            // console.log(data);
+
+            // console.log(handlebarsObj.recipes);
+            // console.log(handlebarsObj);
             // console.log(`Data length: ${data.length}\n Data: ${data}`);
             res.render("recipe", handlebarsObj);
         })
@@ -60,8 +64,8 @@ module.exports = function (app) {
         }).then(function (data) {
             data.ingredients = data.ingredients.replace(/,\s/g, ",").split(",");
             // res.json(data);
-            var handlebarsObj = data.dataValues
-            console.log(handlebarsObj);
+            var handlebarsObj = { recipes: [data]};
+            // console.log(handlebarsObj);
             // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)
         });
