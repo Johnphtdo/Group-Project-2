@@ -41,9 +41,11 @@ $(document).ready(function () {
         
         if(data == "User Does not Exist"){
             $("#usernameAlert").show();
+            $("input").val('');
         }
         else if(data == "Incorrect password"){
             $("#passwordAlert").show();
+            $("input").val('');
         }
         else{
             console.log(data)
@@ -64,14 +66,18 @@ $(document).ready(function () {
         $.post('/users/register', newUser).then(function (data) {
             if(data == "Username already exists"){
             $("#usernameExist").show();
+            $("input").val('');
             }
             else if (data == "Fields Cannot Be Empty"){
             $("#fieldsEmpty").show();
+            $("input").val('');
+
             }
             else {
             console.log(data);
             console.log("New User")
             $("#signUpAlert").show();
+            $("input").val('');
             }
         })
     }
