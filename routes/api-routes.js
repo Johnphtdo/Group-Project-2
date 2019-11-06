@@ -15,21 +15,25 @@ module.exports = function (app) {
 
     // Routes for the Recipe Table
     app.get("/view-recipe", function (req, res) {
-        // db.Recipe
-        // .findAll({})
-        // .then(function(data){
-        //     var handlebarsObj = {
-        //     recipes: data
-        //     };
-        //     res.render("recipe", handlebarsObj);
-        // })
-        res.render("partials/recipes/view-block");
+        db.Recipe
+        .findAll({})
+        .then(function(data){
+            var handlebarsObj = {recipes:[]};
+            for (let i = 0; i < data.length; i++) {
+                
+            
+            handlebarsObj.recipes.push(data[i].dataValues)
+            
+        }
+        res.render("partials/recipes/view-block", handlebarsObj);
+        })
+        
     });
 
     // GET route for getting all recipes by User
     app.get("/api/user/:user_name", function (req, res) {
         let username = req.params.user_name
-        console.log(username);
+        // console.log(username);
         db.Recipe.findAll({
             where: {
                 user_name: username
