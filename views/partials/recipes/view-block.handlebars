@@ -1,6 +1,7 @@
 <br>
 <div class="container recipeInMe">
     {{#each recipes}}
+    <a href="/api/recipe/{{recipe_name}}">
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -11,34 +12,35 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h3>User Name: {{user_name}}</h3>
+                    <p><strong>User Name:</strong> {{user_name}}</p>
                     {{!-- kalaCANcook --}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h3>Ingredients: {{ingredients}}</h3>
-                                           
+                    <p><strong>Ingredients:</strong> {{ingredients}}</p>
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h3>Instructions: {{instructions}}</h3>
+                    <p><strong>Instructions:</strong> {{instructions}}</p>
                     {{!-- Rethink life decisions and pray --}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
-                    <h3>Cook Time: {{prep_time}} minutes</h3>
+                    <p><strong>Cook Time:</strong> {{prep_time}} minutes</p>
                     {{!-- Way to long --}}
                 </div>
                 <div class="col-4">
-                    <h3>Prep Time: {{cook_time}} minutes</h3>
+                    <p><strong>Prep Time:</strong> {{cook_time}} minutes</h3>
                     {{!-- What I should have done and didn't --}}
                 </div>
             </div>
         </div>
     </div>
+    </a>
     {{/each}}
 
 </div>

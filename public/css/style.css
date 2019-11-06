@@ -2,6 +2,14 @@ body {
     background-color: whitesmoke;
 }
 
+a {
+    color: #212529;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
 .jumbotron {
     background-image: url("/images/garlic.jpeg");
     background-size: cover;
