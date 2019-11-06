@@ -1,44 +1,51 @@
 <br>
-<div class="container recipeInMe">
+<div class="container viewMe">
     {{#each recipes}}
     <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
-                    <h2>Recipe: {{recipe_name}}</h2>
+                    <h1> {{recipe_name}}</h1>
                     {{!-- Hatred of Handlebars --}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h3>User Name: {{user_name}}</h3>
+                    {{user_name}}
+
                     {{!-- kalaCANcook --}}
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-12">
-                    <h3>Ingredients: {{ingredients}}</h3>
-                                           
+                    <h3>Ingredients:</h3>
+                    {{ingredients}}
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-12">
-                    <h3>Instructions: {{instructions}}</h3>
+                    <h3>Instructions:</h3>
+                    {{instructions}}
                     {{!-- Rethink life decisions and pray --}}
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-4">
-                    <h3>Cook Time: {{prep_time}} minutes</h3>
+                    <p>Prep time: {{prep_time}} minutes</p>
                     {{!-- Way to long --}}
                 </div>
                 <div class="col-4">
-                    <h3>Prep Time: {{cook_time}} minutes</h3>
+
+                    <p>Cook time: {{cook_time}} minutes</p>
                     {{!-- What I should have done and didn't --}}
                 </div>
             </div>
         </div>
     </div>
+
     {{/each}}
 
 </div>

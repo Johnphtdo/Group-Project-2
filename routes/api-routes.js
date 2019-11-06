@@ -59,6 +59,8 @@ module.exports = function (app) {
         }).then(function (data) {
             // console.log(data.ingredients);
             // res.json(data);
+            data.ingredients = data.ingredients.trim().replace(/\s,,\s/g, ",").replace(/\s\s/g, " ").replace(/\s,/g, "").split(",");
+
             var handlebarsObj = data.dataValues
             // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)

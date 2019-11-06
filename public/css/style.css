@@ -25,7 +25,7 @@ footer {
     padding: 30px 0;
     clear: both;
     font-size: 15px;
-    color: #ffffff;
+    color: black;
     text-align: center;
     /* background: rgb(204, 187, 238); */
     height: 90px; 
@@ -103,6 +103,29 @@ footer {
 .recipeInMe::after {
     content: "";
     background: url("/images/eggie.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.viewMe {
+    position: relative;
+    border: 1px solid white;
+    /* background-color: whitesmoke; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+.viewMe::after {
+    content: "";
+    background: url("/images/pep.jpeg");
     background-size: cover;
     background-position: center;
     opacity: 0.3;
