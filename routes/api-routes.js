@@ -28,14 +28,18 @@ module.exports = function (app) {
 
     // GET route for getting all recipes by User
     app.get("/api/user/:user_name", function (req, res) {
-        console.log(req.params.user_name);
+        let username = req.params.user_name
+        console.log(username);
         db.Recipe.findAll({
             where: {
-                user_name: req.params.user_name
+                user_name: username
             }
         }).then(function (data) {
 
-            var handlebarsObj = data
+            var handlebarsObj = {
+                user_name: username,
+                recipes: data
+            }
             console.log(handlebarsObj)
             res.render("user", handlebarsObj)
         });
