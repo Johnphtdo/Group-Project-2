@@ -8,10 +8,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">Group Project 2</h3>
+  <h3 align="center">SomeRecipes</h3>
 
   <p align="center">
-    Recipes everywhere
+    Recipes everywhere (not to be confused with Allrecipes)
     <br />
     <a href="https://github.com/Johnphtdo/Group-Project-2"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,6 +51,7 @@ The purpose of this project is to demonstrate our knowledge working with MySQL, 
  * [Node Package - Express Handlebars](https://www.npmjs.com/package/express-handlebars)
  * [Node Package - MySQL2](https://www.npmjs.com/package/mysql2)
  * [Sequelize](https://sequelize.org/v5/)
+ * [jQuery Library - Chosen](https://harvesthq.github.io/chosen/)
  * [othneildrew - Best README Template](https://github.com/othneildrew/Best-README-Template)
  
  
