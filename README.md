@@ -108,6 +108,7 @@ Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/
 ### John Do
 [Github Portfolio](https://github.com/Johnphtdo) | [LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
 ### Kala Elam
+[Github Portfolio](https://github.com/speechgirl1505) | [LinkedIn](https://www.linkedin.com/in/kala-elam-404854138/)
 
 ### Jasmine Tsai
 [Github Portfolio](https://jtsai972.github.io/Github-Portfolio/) | [Website - Jtsai972.space](jtsai972.space) | [Email Me](jtsai972@gmail.com) | [LinkedIn](https://www.linkedin.com/in/jasmine-tsai/)
