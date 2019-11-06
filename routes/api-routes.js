@@ -18,12 +18,17 @@ module.exports = function (app) {
         db.Recipe
         .findAll({})
         .then(function(data){
+            for(let i=0; i < data.length; i++) {
+                let ingredients = data[i].dataValues.ingredients;
+                ingredients = ingredients.split(",");
+                // console.log(ingredients);
+            }
             var handlebarsObj = {
-            recipes: data
+                recipes: data
             };
+            // console.log(`Data length: ${data.length}\n Data: ${data}`);
             res.render("recipe", handlebarsObj);
         })
-        // res.render("partials/recipes/view-block");
     });
 
     // GET route for getting all recipes by User
