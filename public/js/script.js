@@ -48,8 +48,8 @@ $(document).ready(function () {
         else{
             console.log(data)
             $("#successfulAlert").show();
+            location.replace("/")
         }
-
         })
     }
 
