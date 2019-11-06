@@ -146,7 +146,7 @@ $(document).ready(function () {
             $("#inputAmount").val().trim(),
             $("#inputMeasurement").val().trim(),
             $("#inputIngredient").val().trim()
-        ].join(" ");
+        ].join(" ").replace(/\s\s/g, " ");
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
         $('.ingredientsInMe').append("<li>" + oneIngredient + "</li>");

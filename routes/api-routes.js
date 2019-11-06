@@ -48,9 +48,8 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-            // console.log(data.ingredients)
-            // data.ingredients = data.ingredients.split(",");
-            // console.log(data.ingredients)
+            console.log(data.ingredients);
+            console.log(data.ingredients);
             // res.json(data);
             var handlebarsObj = data.dataValues
             // console.log(handlebarsObj)
