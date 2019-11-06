@@ -138,6 +138,7 @@ $(document).ready(function () {
                 $('#showMeTheModal').modal('toggle');
                 // console.log()
                 console.log("created new recipe");
+                $('input').val('');
             }
         );
     };
