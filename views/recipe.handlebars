@@ -1,3 +1,5 @@
 <div class="container mt-5">
-  {{>recipes/recipe-block}}
+  {{#each recipes}}
+    {{>recipes/recipe-block}}
+  {{/each}}
 </div>
