@@ -1,5 +1,4 @@
-use obzaekoq8tgz1dw9;
-INSERT INTO Recipes(user_name,recipe_name,ingredients,instructions,cook_time,prep_time)
+INSERT INTO recipes(user_name,recipe_name,ingredients,instructions,cook_time,prep_time)
 
 VALUES 
 (

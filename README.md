@@ -16,9 +16,6 @@
     <a href="https://github.com/Johnphtdo/Group-Project-2"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://group-project-jtjdke.herokuapp.com/"><strong>Demo it on Heroku »</strong></a>
-    <br />
-    <br />
     <a href="https://github.com/Johnphtdo/Group-Project-2/issues">Report Bug</a>
     ·
     <a href="https://github.com/Johnphtdo/Group-Project-2/issues">Request Feature</a>
@@ -45,9 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-This is a recipe database with CRUD functionality. People can search recipes by User or by Recipe. In order to add a recipe you would need to sign up, log in, and then add a recipe. As a user you can edit your recipes or delete your own recipes.
-
+The purpose of this project is to demonstrate our knowledge working with MySQL, Sequelize, Handlebars and deploying it into Heroku with data. GET requests for this project can display all recipes by username, all recipes in the database, and individual recipes. POST request is available for Users to put in recipes into the database. 
 
 ### Built With
  * [MySQL](https://www.mysql.com/)
@@ -55,10 +50,6 @@ This is a recipe database with CRUD functionality. People can search recipes by 
  * [Express.js](http://expressjs.com/)
  * [Node Package - Express Handlebars](https://www.npmjs.com/package/express-handlebars)
  * [Node Package - MySQL2](https://www.npmjs.com/package/mysql2)
- * [Node Package - bCrypt](https://www.npmjs.com/package/bcrypt)
- * [Node Package - dotenv](https://www.npmjs.com/package/dotenv)
- * [Node Package- Passport](https://www.npmjs.com/package/passport)
- * [Node Package - Passport Local](https://www.npmjs.com/package/passport-local)
  * [Sequelize](https://sequelize.org/v5/)
  * [othneildrew - Best README Template](https://github.com/othneildrew/Best-README-Template)
  
@@ -91,9 +82,8 @@ npm install
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-The command to run this program in node is `node server` in the root directory of this program. (The one with the server.js file)
 
-In the [heroku demo](https://group-project-jtjdke.herokuapp.com/) you can search recipes using the search function, sign up, log in, add recipes as a user, edit the recipes associated with you as a user, and delete the recipes associated with your account.
+
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -114,7 +104,6 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/Johnphtdo/Group-Project-2)
-Heroku Demo: [https://group-project-jtjdke.herokuapp.com/](https://group-project-jtjdke.herokuapp.com/)
 
 ### John Do
 [Github Portfolio](https://github.com/Johnphtdo) | [LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)

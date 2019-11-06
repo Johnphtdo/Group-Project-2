@@ -123,7 +123,7 @@ $(document).ready(function () {
         var newRecipe = {
             recipe_name: $("#inputRecipeName").val().trim(),
             user_name: $("#inputUserName").val().trim(),
-            ingredients: JSON.stringify(ingredientsArray),
+            ingredients: ingredientsArray.toString(),
             instructions: $("#inputInstructions").val().trim(),
             cook_time: parseInt($("#inputCook").val().trim()),
             prep_time: parseInt($("#inputPrep").val().trim()),
