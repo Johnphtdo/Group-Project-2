@@ -60,7 +60,7 @@ module.exports = function (app) {
             // console.log(data.ingredients);
             // res.json(data);
             var handlebarsObj = data.dataValues
-            console.log(handlebarsObj)
+            // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)
         });
     });
