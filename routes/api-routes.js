@@ -33,7 +33,7 @@ module.exports = function (app) {
     // GET route for getting all recipes by User
     app.get("/api/user/:user_name", function (req, res) {
         let username = req.params.user_name
-        console.log(username);
+        // console.log(username);
         db.Recipe.findAll({
             where: {
                 user_name: username
