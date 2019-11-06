@@ -18,23 +18,27 @@ module.exports = function (app) {
         db.Recipe
         .findAll({})
         .then(function(data){
-            var handlebarsObj = {recipes:[]};
-            for (let i = 0; i < data.length; i++) {
-                
             
-            handlebarsObj.recipes.push(data[i].dataValues)
-            
-        }
-        res.render("partials/recipes/view-block", handlebarsObj);
-        })
-        
+            for(let i=0; i < data.length; i++) {
+                data[i].dataValues.ingredients = data[i].dataValues.ingredients.replace(/,\s/g, ",").split(",");
+            }
+            console.log(data);
+            var handlebarsObj = {
+                recipes: data
+            };
+            // console.log(data);
 
+            // console.log(handlebarsObj.recipes);
+            // console.log(handlebarsObj);
+            // console.log(`Data length: ${data.length}\n Data: ${data}`);
+            res.render("recipe", handlebarsObj);
+        })
     });
 
     // GET route for getting all recipes by User
     app.get("/api/user/:user_name", function (req, res) {
         let username = req.params.user_name
-        // console.log(username);
+        console.log(username);
         db.Recipe.findAll({
             where: {
                 user_name: username
@@ -58,8 +62,10 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-           data.ingredients = data.ingredients.trim().replace(/\s,,\s/g, ",").replace(/\s\s/g, " ").replace(/\s,/g, "").split(",");
-            var handlebarsObj = data.dataValues
+            data.ingredients = data.ingredients.replace(/,\s/g, ",").split(",");
+            // res.json(data);
+            var handlebarsObj = { recipes: [data]};
+            // console.log(handlebarsObj);
             // console.log(handlebarsObj)
             res.render("recipe", handlebarsObj)
         });
