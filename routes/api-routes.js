@@ -22,15 +22,9 @@ module.exports = function (app) {
             for(let i=0; i < data.length; i++) {
                 data[i].dataValues.ingredients = data[i].dataValues.ingredients.replace(/,\s/g, ",").split(",");
             }
-            console.log(data);
             var handlebarsObj = {
                 recipes: data
             };
-            // console.log(data);
-
-            // console.log(handlebarsObj.recipes);
-            // console.log(handlebarsObj);
-            // console.log(`Data length: ${data.length}\n Data: ${data}`);
             res.render("recipe", handlebarsObj);
         })
     });
