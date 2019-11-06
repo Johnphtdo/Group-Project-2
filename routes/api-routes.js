@@ -28,15 +28,20 @@ module.exports = function (app) {
 
     // GET route for getting all recipes by User
     app.get("/api/user/:user_name", function (req, res) {
-        console.log(req.params.user_name);
+        let username = req.params.user_name
+        console.log(username);
         db.Recipe.findAll({
             where: {
-                user_name: req.params.user_name
+                user_name: username
             }
         }).then(function (data) {
-           
-            var handlebarsObj = data
-            console.log(handlebarsObj)
+
+            var handlebarsObj = {
+                user_name: username,
+                recipes: data
+            }
+            // console.log(handlebarsObj)
+            // console.log(data[0].dataValues)
             res.render("user", handlebarsObj)
         });
     });
@@ -48,8 +53,7 @@ module.exports = function (app) {
                 recipe_name: req.params.recipe_name
             }
         }).then(function (data) {
-            data.ingredients = data.ingredients.trim().replace(/\s,,\s/g, ",").replace(/\s\s/g, " ").replace(/\s,/g, "").split(",");
-            console.log(data.ingredients)
+            // console.log(data.ingredients);
             // res.json(data);
             var handlebarsObj = data.dataValues
             // console.log(handlebarsObj)

@@ -142,13 +142,17 @@ $(document).ready(function () {
     function addIngredient(event) {
         event.preventDefault();
         //need to remove & and insert commas where split occurs
-        var oneIngredient = $("#inputAmount").val() + " " + $("#inputMeasurement").val() + " " + $("#inputIngredient").val() + " ,";
+        var oneIngredient = [
+            $("#inputAmount").val().trim(),
+            $("#inputMeasurement").val().trim(),
+            $("#inputIngredient").val().trim()
+        ].join(" ").replace(/\s\s/g, " ");
         console.log(oneIngredient);
         ingredientsArray.push(oneIngredient);
-        $('.ingredientsInMe').append(oneIngredient);
-        $("#inputAmount").val(" ");
-        $("#inputMeasurement").val(" ");
-        $("#inputIngredient").val(" ");
+        $('.ingredientsInMe').append("<li>" + oneIngredient + "</li>");
+        $("#inputAmount").val("");
+        $("#inputMeasurement").val("");
+        $("#inputIngredient").val("");
         console.log(ingredientsArray)
     };
 
