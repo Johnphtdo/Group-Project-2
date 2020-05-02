@@ -105,6 +105,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 Project Link: [https://github.com/Johnphtdo/Group-Project-2](https://github.com/Johnphtdo/Group-Project-2)
+Deployed Link: [https://group-project-jtjdke.herokuapp.com/](https://group-project-jtjdke.herokuapp.com/)
 
 ### John Do
 [Github Portfolio](https://github.com/Johnphtdo) | [LinkedIn](https://www.linkedin.com/in/john-do-a02a4661/)
